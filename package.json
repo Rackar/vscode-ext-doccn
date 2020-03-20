@@ -6,7 +6,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:list": "node utils/getFilenames.js",
     "docs:build": "vuepress build docs ",
-    "docs:build:gitpage": "export VUEPRESS_BASE=/VS-Code-Extension-Doc-ZH/|| set VUEPRESS_BASE=/VS-Code-Extension-Doc-ZH/&&vuepress build docs"
+    "docs:build:gitpage": "export VUEPRESS_BASE=/VS-Code-Extension-Doc-ZH/ || set VUEPRESS_BASE=/VS-Code-Extension-Doc-ZH/ && vuepress build docs"
   },
   "license": "MIT",
   "devDependencies": {
