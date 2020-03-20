@@ -1,5 +1,7 @@
 # VS Code 插件开发文档
 
+本分支为vuepress版本。
+
 欢迎来到为巨硬填坑的中文文档😆
 
 [📚 查看中文文档](https://liiked.github.io/VS-Code-Extension-Doc-ZH/

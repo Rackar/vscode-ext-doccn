@@ -1,0 +1,345 @@
+[
+  {
+    "text": "首页",
+    "link": "/"
+  },
+  {
+    "text": "内容导航",
+    "items": [
+      {
+        "text": "advanced-topics",
+        "items": [
+          {
+            "text": "extension-host",
+            "link": "/advanced-topics/extension-host"
+          },
+          {
+            "text": "remote-extensions",
+            "link": "/advanced-topics/remote-extensions"
+          },
+          {
+            "text": "using-proposed-api",
+            "link": "/advanced-topics/using-proposed-api"
+          }
+        ]
+      },
+      {
+        "text": "api",
+        "link": "/api/"
+      },
+      {
+        "text": "extensibility-reference",
+        "items": [
+          {
+            "text": "activation-events",
+            "link": "/extensibility-reference/activation-events"
+          },
+          {
+            "text": "api-debugging",
+            "link": "/extensibility-reference/api-debugging"
+          },
+          {
+            "text": "api-markdown",
+            "link": "/extensibility-reference/api-markdown"
+          },
+          {
+            "text": "api-scm",
+            "link": "/extensibility-reference/api-scm"
+          },
+          {
+            "text": "contribution-points",
+            "link": "/extensibility-reference/contribution-points"
+          },
+          {
+            "text": "document-selectors",
+            "link": "/extensibility-reference/document-selectors"
+          },
+          {
+            "text": "extension-manifest",
+            "link": "/extensibility-reference/extension-manifest"
+          },
+          {
+            "text": "language-extension-guidelines",
+            "link": "/extensibility-reference/language-extension-guidelines"
+          },
+          {
+            "text": "overview",
+            "link": "/extensibility-reference/overview"
+          },
+          {
+            "text": "principles-patterns",
+            "link": "/extensibility-reference/principles-patterns"
+          },
+          {
+            "text": "vscode-api",
+            "link": "/extensibility-reference/vscode-api"
+          },
+          {
+            "text": "vscode-api-commands",
+            "link": "/extensibility-reference/vscode-api-commands"
+          }
+        ]
+      },
+      {
+        "text": "extension-authoring",
+        "items": [
+          {
+            "text": "developing-extensions",
+            "link": "/extension-authoring/developing-extensions"
+          },
+          {
+            "text": "example-debug-adapter",
+            "link": "/extension-authoring/example-debug-adapter"
+          },
+          {
+            "text": "example-hello-world",
+            "link": "/extension-authoring/example-hello-world"
+          },
+          {
+            "text": "example-language-server",
+            "link": "/extension-authoring/example-language-server"
+          },
+          {
+            "text": "example-tasks",
+            "link": "/extension-authoring/example-tasks"
+          },
+          {
+            "text": "example-word-count",
+            "link": "/extension-authoring/example-word-count"
+          },
+          {
+            "text": "extension-generator",
+            "link": "/extension-authoring/extension-generator"
+          },
+          {
+            "text": "overview",
+            "link": "/extension-authoring/overview"
+          },
+          {
+            "text": "publish-extension",
+            "link": "/extension-authoring/publish-extension"
+          },
+          {
+            "text": "samples",
+            "link": "/extension-authoring/samples"
+          },
+          {
+            "text": "testing-extensions",
+            "link": "/extension-authoring/testing-extensions"
+          },
+          {
+            "text": "themes-snippets-colorizers",
+            "link": "/extension-authoring/themes-snippets-colorizers"
+          },
+          {
+            "text": "webview-api",
+            "link": "/extension-authoring/webview-api"
+          }
+        ]
+      },
+      {
+        "text": "extension-capabilities",
+        "items": [
+          {
+            "text": "",
+            "link": "/extension-capabilities/"
+          },
+          {
+            "text": "common-capabilities",
+            "link": "/extension-capabilities/common-capabilities"
+          },
+          {
+            "text": "extending-workbench",
+            "link": "/extension-capabilities/extending-workbench"
+          },
+          {
+            "text": "theming",
+            "link": "/extension-capabilities/theming"
+          }
+        ]
+      },
+      {
+        "text": "extension-guides",
+        "items": [
+          {
+            "text": "",
+            "link": "/extension-guides/"
+          },
+          {
+            "text": "color-theme",
+            "link": "/extension-guides/color-theme"
+          },
+          {
+            "text": "command",
+            "link": "/extension-guides/command"
+          },
+          {
+            "text": "debugger-extension",
+            "link": "/extension-guides/debugger-extension"
+          },
+          {
+            "text": "icon-theme",
+            "link": "/extension-guides/icon-theme"
+          },
+          {
+            "text": "markdown-extension",
+            "link": "/extension-guides/markdown-extension"
+          },
+          {
+            "text": "scm-provider",
+            "link": "/extension-guides/scm-provider"
+          },
+          {
+            "text": "task-provider",
+            "link": "/extension-guides/task-provider"
+          },
+          {
+            "text": "tree-view",
+            "link": "/extension-guides/tree-view"
+          },
+          {
+            "text": "virtual-documents",
+            "link": "/extension-guides/virtual-documents"
+          },
+          {
+            "text": "webview",
+            "link": "/extension-guides/webview"
+          }
+        ]
+      },
+      {
+        "text": "get-started",
+        "items": [
+          {
+            "text": "extension-anatomy",
+            "link": "/get-started/extension-anatomy"
+          },
+          {
+            "text": "wrapping-up",
+            "link": "/get-started/wrapping-up"
+          },
+          {
+            "text": "your-first-extension",
+            "link": "/get-started/your-first-extension"
+          }
+        ]
+      },
+      {
+        "text": "language-extensions",
+        "items": [
+          {
+            "text": "",
+            "link": "/language-extensions/"
+          },
+          {
+            "text": "language-configuration-guide",
+            "link": "/language-extensions/language-configuration-guide"
+          },
+          {
+            "text": "language-server-extension-guide",
+            "link": "/language-extensions/language-server-extension-guide"
+          },
+          {
+            "text": "programmatic-language-features",
+            "link": "/language-extensions/programmatic-language-features"
+          },
+          {
+            "text": "snippet-guide",
+            "link": "/language-extensions/snippet-guide"
+          },
+          {
+            "text": "syntax-highlight-guide",
+            "link": "/language-extensions/syntax-highlight-guide"
+          }
+        ]
+      },
+      {
+        "text": "preknowledge",
+        "items": [
+          {
+            "text": "class",
+            "link": "/preknowledge/class"
+          },
+          {
+            "text": "declaration-files",
+            "link": "/preknowledge/declaration-files"
+          },
+          {
+            "text": "first-step",
+            "link": "/preknowledge/first-step"
+          },
+          {
+            "text": "generics",
+            "link": "/preknowledge/generics"
+          },
+          {
+            "text": "interface-and-namespace",
+            "link": "/preknowledge/interface-and-namespace"
+          },
+          {
+            "text": "variable-and-type",
+            "link": "/preknowledge/variable-and-type"
+          }
+        ]
+      },
+      {
+        "text": "references",
+        "items": [
+          {
+            "text": "activation-events",
+            "link": "/references/activation-events"
+          },
+          {
+            "text": "commands",
+            "link": "/references/commands"
+          },
+          {
+            "text": "contribution-points",
+            "link": "/references/contribution-points"
+          },
+          {
+            "text": "document-selector",
+            "link": "/references/document-selector"
+          },
+          {
+            "text": "extension-manifest",
+            "link": "/references/extension-manifest"
+          },
+          {
+            "text": "icons-in-labels",
+            "link": "/references/icons-in-labels"
+          },
+          {
+            "text": "theme-color",
+            "link": "/references/theme-color"
+          },
+          {
+            "text": "vscode-api",
+            "link": "/references/vscode-api"
+          }
+        ]
+      },
+      {
+        "text": "working-with-extensions",
+        "items": [
+          {
+            "text": "bundling-extension",
+            "link": "/working-with-extensions/bundling-extension"
+          },
+          {
+            "text": "continuous-integration",
+            "link": "/working-with-extensions/continuous-integration"
+          },
+          {
+            "text": "publish-extension",
+            "link": "/working-with-extensions/publish-extension"
+          },
+          {
+            "text": "testing-extension",
+            "link": "/working-with-extensions/testing-extension"
+          }
+        ]
+      }
+    ]
+  }
+]

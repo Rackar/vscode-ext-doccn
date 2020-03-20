@@ -1,0 +1,95 @@
+{
+  "/advanced-topics/": [
+    "extension-host",
+    "remote-extensions",
+    "using-proposed-api"
+  ],
+  "/api/": [
+    ""
+  ],
+  "/extensibility-reference/": [
+    "activation-events",
+    "api-debugging",
+    "api-markdown",
+    "api-scm",
+    "contribution-points",
+    "document-selectors",
+    "extension-manifest",
+    "language-extension-guidelines",
+    "overview",
+    "principles-patterns",
+    "vscode-api",
+    "vscode-api-commands"
+  ],
+  "/extension-authoring/": [
+    "developing-extensions",
+    "example-debug-adapter",
+    "example-hello-world",
+    "example-language-server",
+    "example-tasks",
+    "example-word-count",
+    "extension-generator",
+    "overview",
+    "publish-extension",
+    "samples",
+    "testing-extensions",
+    "themes-snippets-colorizers",
+    "webview-api"
+  ],
+  "/extension-capabilities/": [
+    "",
+    "common-capabilities",
+    "extending-workbench",
+    "theming"
+  ],
+  "/extension-guides/": [
+    "",
+    "color-theme",
+    "command",
+    "debugger-extension",
+    "icon-theme",
+    "markdown-extension",
+    "scm-provider",
+    "task-provider",
+    "tree-view",
+    "virtual-documents",
+    "webview"
+  ],
+  "/get-started/": [
+    "extension-anatomy",
+    "wrapping-up",
+    "your-first-extension"
+  ],
+  "/language-extensions/": [
+    "",
+    "language-configuration-guide",
+    "language-server-extension-guide",
+    "programmatic-language-features",
+    "snippet-guide",
+    "syntax-highlight-guide"
+  ],
+  "/preknowledge/": [
+    "class",
+    "declaration-files",
+    "first-step",
+    "generics",
+    "interface-and-namespace",
+    "variable-and-type"
+  ],
+  "/references/": [
+    "activation-events",
+    "commands",
+    "contribution-points",
+    "document-selector",
+    "extension-manifest",
+    "icons-in-labels",
+    "theme-color",
+    "vscode-api"
+  ],
+  "/working-with-extensions/": [
+    "bundling-extension",
+    "continuous-integration",
+    "publish-extension",
+    "testing-extension"
+  ]
+}
