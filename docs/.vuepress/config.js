@@ -1,7 +1,7 @@
 var sidebar = require("./config/sidebar.json");
 var nav = require("./config/nav.json");
 module.exports = {
-  title: "VS Code Extension Doc ZH",
+  title: "VS Code 插件开发中文文档",
   description: "Just playing around",
   base: process.env.VUEPRESS_BASE || "/",
   themeConfig: {

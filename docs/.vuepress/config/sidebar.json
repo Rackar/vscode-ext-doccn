@@ -109,5 +109,54 @@
       "/references/icons-in-labels",
       "/references/document-selector"
     ]
+  },
+  {
+    "title": "插件介绍（第一版）",
+    "path": "/extension-authoring/overview",
+    "children": [
+      "/extension-authoring/overview",
+      "/extension-authoring/extension-generator",
+      "/extension-authoring/themes-snippets-colorizers"
+    ]
+  },
+  {
+    "title": "从示例开始（第一版）",
+    "path": "/extension-authoring/example-hello-world",
+    "children": [
+      "/extension-authoring/example-hello-world",
+      "/extension-authoring/example-word-count",
+      "/extension-authoring/example-language-server",
+      "/extension-authoring/example-debug-adapter",
+      "/extension-authoring/example-tasks",
+      "/extension-authoring/samples"
+    ]
+  },
+  {
+    "title": "开发步骤（第一版）",
+    "path": "/extension-authoring/developing-extensions",
+    "children": [
+      "/extension-authoring/developing-extensions",
+      "/extension-authoring/testing-extensions",
+      "/extension-authoring/publish-extension"
+    ]
+  },
+  {
+    "title": "进阶（第一版）",
+    "path": "/extension-authoring/webview-api",
+    "children": [
+      "/extension-authoring/webview-api",
+      "/extensibility-reference/overview",
+      "/extensibility-reference/principles-patterns",
+      "/extensibility-reference/language-extension-guidelines",
+      "/extensibility-reference/extension-manifest",
+      "/extensibility-reference/contribution-points",
+      "/extensibility-reference/activation-events",
+      "/extensibility-reference/vscode-api-commands",
+      "/extensibility-reference/api-debugging",
+      "/extensibility-reference/document-selectors",
+      "/extensibility-reference/vscode-api",
+      "/extensibility-reference/api-scm",
+      "/extensibility-reference/api-markdown"
+    ]
   }
 ]
