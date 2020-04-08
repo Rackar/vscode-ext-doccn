@@ -7,8 +7,16 @@ module.exports = {
   themeConfig: {
     nav: nav,
     // sidebar: 'auto', //自动侧边栏
-    sidebar: sidebar
+    sidebar: sidebar,
     // displayAllHeaders: true // 默认值：false
+    lastUpdated: "更新于",
+    repo: 'Rackar/vscode-ext-doccn',
+    // // 假如文档不是放在仓库的根目录下：
+    docsDir: 'docs',
+    // // 假如文档放在一个特定的分支下：
+    docsBranch: 'vuepress',
+    editLinks: true,
+    editLinkText: '参与编辑此文章',
   },
 
 
