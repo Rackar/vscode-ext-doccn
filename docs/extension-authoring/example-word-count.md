@@ -6,8 +6,10 @@
 
 ![](https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensions/images/example-word-count/wordcountevent2.gif)
 
-?> 小贴士：如果你碰到了什么问题，可以在这里[下载完整的项目](https://github.com/microsoft/vscode-wordcount)进行调试
-
+<!-- ?> 小贴士： -->
+:::tip 
+如果你碰到了什么问题，可以在这里[下载完整的项目](https://github.com/microsoft/vscode-wordcount)进行调试
+:::
 ## 本节要点
 本章将通过三个部分让你了解vscode有关的概念：
 - [更新状态栏](#更新状态栏) - 在*状态栏*中显示自定义文本
@@ -114,8 +116,10 @@ class WordCounter {
 
 为了实现这个目标，我们给`extension.ts`添加一个新类，订阅上述事件然后让`WordCounter`更新字数。
 
-?>在实现时，你需要注意我们是如何把**消息订阅( subscription )**转换为**释放器( Disposables )**来管理的，它将监听并释放自己。
-
+<!-- ?> -->
+:::tip
+在实现时，你需要注意我们是如何把**消息订阅( subscription )**转换为**释放器( Disposables )**来管理的，它将监听并释放自己。
+:::
 根据下列代码，将`WordCounterController`类添加到`extension.ts`文件底部。
 ```typescript
 class WordCounterController {

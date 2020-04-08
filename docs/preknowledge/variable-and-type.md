@@ -2,8 +2,10 @@
 
 本节将介绍基础的TypeScript变量以及它的类型系统，它本质上和JavaScript是一样的，不过东西会更多一点，对于非js开发者来说，你可能会遇到熟悉的“枚举”、“元组”类型，了解了这点，或许能让你安心并更快地掌握TS，但是这并不意味着你就可以高枕无忧了，虽然TS扩展了JS的类型能力，但它本质上依旧是一门弱类型语言，请在书写代码时遵循社区的最佳实践并保持谨慎。
 
-?> 本文参考社区翻译文档，详见[https://www.tslang.cn/docs/handbook/basic-types.html](https://www.tslang.cn/docs/handbook/basic-types.html)
-
+<!-- ?>  -->
+:::tip
+本文参考社区翻译文档，详见[https://www.tslang.cn/docs/handbook/basic-types.html](https://www.tslang.cn/docs/handbook/basic-types.html)
+:::
 ## 类型
 ---
 

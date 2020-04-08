@@ -113,8 +113,10 @@ yo code
 ```
 - 为`.color-theme.json`色彩定义文件添加前缀，那么你在编辑文件时能获得悬浮提示、代码补全、色彩装饰器和色彩选择器。
 
-?> [ColorSublime](https://colorsublime.github.io/)有成百上千个现成的TextMate主题。你可以选择一个你喜欢的主题，复制下载链接，然后用Yeoman选择这个主题生成你的插件。格式如：`"https://raw.githubusercontent.com/Colorsublime/Colorsublime-Themes/master/themes/(name).tmTheme"`
-
+<!-- ?> -->
+:::tip
+[ColorSublime](https://colorsublime.github.io/)有成百上千个现成的TextMate主题。你可以选择一个你喜欢的主题，复制下载链接，然后用Yeoman选择这个主题生成你的插件。格式如：`"https://raw.githubusercontent.com/Colorsublime/Colorsublime-Themes/master/themes/(name).tmTheme"`
+:::
 
 ## 测试新的主题
 ---
@@ -132,8 +134,10 @@ yo code
 
 要想让你的插件在插件市场上看起来更好一点，我们建议你参考一下[插件市场展示小贴士](https://github.com/Microsoft/vscode-docs/blob/master/docs/extensionAPI/extension-manifest.md#marketplace-presentation-tips)。
 
-?> 小贴士：想要用户轻松地找到你的主题，最好修改一下`package.json`，把关键字"theme"写到插件描述（extension description）中，然后把`Category`设置为`Theme`
-
+<!-- ?> 小贴士： -->
+:::tip
+想要用户轻松地找到你的主题，最好修改一下`package.json`，把关键字"theme"写到插件描述（extension description）中，然后把`Category`设置为`Theme`
+:::
 ## 添加新的色彩id
 ---
 
@@ -333,8 +337,10 @@ yo code
 
 注意`snippets`需要和`language`关联起来。可以是VS Code内置的[支持语言](https://github.com/Microsoft/vscode-docs/blob/master/docs/languages/overview.md)类型，或者是由其他插件提供的语言。请确保`language`的值书写正确无误。
 
-?> 小贴士：想要用户轻松地找到你的主题，最好修改一下`package.json`，把关键字"snippet"写到插件描述（extension description）中，然后把`Category`设置为`snippet`
-
+<!-- ?> 小贴士： -->
+:::tip
+想要用户轻松地找到你的主题，最好修改一下`package.json`，把关键字"snippet"写到插件描述（extension description）中，然后把`Category`设置为`snippet`
+:::
 要想让你的插件在插件市场上看起来更好一点，我们建议你参考一下[插件市场展示小贴士](/extensibility-reference/extension-manifest.md#市场展示建议)。
 
 ## 添加新的语言（着色器）
@@ -386,8 +392,10 @@ Yeoman生成的`vsc-extension-quickstart.md`文件包含了如何运行和debug�
 
 使用[vsce publishing tool](/extension-authoring/publish-extension.md)工具将你的插件发布到VS Code市场上。
 
-?> 小贴士：想要用户轻松地找到你的语言支持，最好修改一下`package.json`，把关键字"language"或者"language support"写到插件描述（extension description）中，然后把`Category`设置为`Programming Languages`
-
+<!-- ?> 小贴士： -->
+:::tip
+想要用户轻松地找到你的语言支持，最好修改一下`package.json`，把关键字"language"或者"language support"写到插件描述（extension description）中，然后把`Category`设置为`Programming Languages`
+:::
 ## 添加你的语言支持插件(插件组合)
 ---
 

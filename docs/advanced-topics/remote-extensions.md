@@ -35,7 +35,10 @@ VS Code API 会自动运行在正确的机器上（不管是本地还是远程�
 4. 在你已经连接远程目录的项目中，使用命令 **Install from VSIX...**安装你打包好的插件
 5. 完成后重启
 
-?> **小提示：**安装完毕后，你可以使用 **Developer: Show Running Extensions**命令查看VS Code在本地运行插件还是在远程运行插件的。
+<!-- ?> **小提示：** -->
+::: tip 小提示
+安装完毕后，你可以使用 **Developer: Show Running Extensions**命令查看VS Code在本地运行插件还是在远程运行插件的。
+:::
 
 #### 在远程调试你的插件
 

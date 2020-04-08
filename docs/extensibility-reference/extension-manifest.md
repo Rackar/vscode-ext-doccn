@@ -151,8 +151,10 @@ Icon和banner颜色会展示在市场页面头部，`theme`属性是指banner中
 }
 ```
 
-?> **小贴士：** The [Extension Manifest Editor](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.extension-manifest-editor) 插件可以帮你预览预览你的插件中的`README.md` 和 `package.json`， 生成的预览就像你已经发布到插件市场了一样。
-
+<!-- ?> **小贴士：**  -->
+:::tip 小提示
+The [Extension Manifest Editor](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.extension-manifest-editor) 插件可以帮你预览预览你的插件中的`README.md` 和 `package.json`， 生成的预览就像你已经发布到插件市场了一样。
+:::
 ## 使用认证过的标志
 ---
 出于安全考虑，我们只允许可信服务商提供的标志。
@@ -229,8 +231,10 @@ Icon和banner颜色会展示在市场页面头部，`theme`属性是指banner中
 ```
 注意插件的`categories`字段现在包含了`Programming Languages`和`Snippets`，以便用户在市场中找到这个插件。
 
-?> **小贴士：** 整合好的配置文件应该使用同样的标识符。在上述例子中，所有的标识符都用了"latex"。这样VS Code 才知道（语法）着色器和代码片段是为LaTeX语言准备的，当编辑LaTeX文件的时候才会激活插件。
-
+<!-- ?> **小贴士：** -->
+:::tip 小提示
+ 整合好的配置文件应该使用同样的标识符。在上述例子中，所有的标识符都用了"latex"。这样VS Code 才知道（语法）着色器和代码片段是为LaTeX语言准备的，当编辑LaTeX文件的时候才会激活插件。
+:::
 ## 插件包
 ---
 你也可以将几个独立的插件打包成一个“插件包”。插件包是指一组可以无冲突安装的插件集合。然后你就可以很方便地把插件分享给其他人，或者为特定情境创建一组插件，比如帮助PHP工程师在VS Code中快速上手。

@@ -68,8 +68,10 @@ vsce create-publisher (publisher name)
 ```
 `vsce`会记住这个Personal Access Token，日后再用这个发行方的时候会自动带上。
 
-?> 注意：另外，你也可以在市场的发行方[管理页](https://marketplace.visualstudio.com/manage)中创建发行方，然后用这个账号登录`vsce`。
-
+<!-- ?>  -->
+:::warning
+注意：另外，你也可以在市场的发行方[管理页](https://marketplace.visualstudio.com/manage)中创建发行方，然后用这个账号登录`vsce`。
+:::
 #### 发行方登录
 
 如果你已经有发行方账号了：
@@ -167,8 +169,10 @@ vsce package
 ```
 你应该忽略哪些不必在运行时用到的文件。例如：你的插件是用Typescript写的，那么你就应该忽略所有的`**/*.ts`文件。
 
-?> **注意：**在`devDependencies`列出的开发依赖会被自动忽略，你不必将他们加入到`.vscodeignore`中。
-
+<!-- ?> **注意：** -->
+:::warning 注意
+在`devDependencies`列出的开发依赖会被自动忽略，你不必将他们加入到`.vscodeignore`中。
+:::
 ##### 预发布步骤
 
 你是可以在清单文件中添加预发布步骤的，下面的命令会在插件每次打包时执行：

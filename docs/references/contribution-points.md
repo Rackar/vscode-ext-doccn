@@ -29,8 +29,10 @@ configuration是JSON格式的键值对，用户会在修改设置时获得对应
 
 你可以用`vscode.workspace.getConfiguration('myExtension')`读取配置值。
 
-?> 小提示：配置`markdownDescription`比配置`description`更好，它能呈现Markdown格式的文档。
-
+<!-- ?> 小提示： -->
+:::tip
+配置`markdownDescription`比配置`description`更好，它能呈现Markdown格式的文档。
+:::
 #### 示例
 
 ```json
@@ -79,8 +81,10 @@ configuration是JSON格式的键值对，用户会在修改设置时获得对应
 ---
 设置命令标题和命令体，随后这个命令会显示在**命令面板**中。你也可以加上`category`前缀，在**命令面板**中会以分类显示。
 
-?>**注意：**当调用命令时（通过组合键或者在**命令面板**中调用），VS Code会触发激活事件`onCommand:${command}`。
-
+<!-- ?>**注意：** -->
+:::warning
+当调用命令时（通过组合键或者在**命令面板**中调用），VS Code会触发激活事件`onCommand:${command}`。
+:::
 下面的示例是修改`markdown`语言的默认配置。
 
 #### 示例
@@ -95,8 +99,10 @@ configuration是JSON格式的键值对，用户会在修改设置时获得对应
 }
 ```
 
-?> **提示**: 想了解更多的有关于在VS Code插件开发中使用命令, 请参阅[命令](/extension-guides/command)章节
-
+<!-- ?> **提示**:  -->
+:::tip
+想了解更多的有关于在VS Code插件开发中使用命令, 请参阅[命令](/extension-guides/command)章节
+:::
 ![commands](https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/references/images/contribution-points/commands.png)
 
 ## contributes.menus
@@ -125,8 +131,10 @@ configuration是JSON格式的键值对，用户会在修改设置时获得对应
 
 
 
-?>**注意：**当菜单中的命令被调用，VS Code会将当前选中资源作为参数传给调用的命令。比方说，资源管理器的菜单被触发，选中资源的URI会作为参数，编辑器中的菜单项被触发，则将当前文件的URI作为参数传入。
-
+<!-- ?>**注意：** -->
+:::warning
+当菜单中的命令被调用，VS Code会将当前选中资源作为参数传给调用的命令。比方说，资源管理器的菜单被触发，选中资源的URI会作为参数，编辑器中的菜单项被触发，则将当前文件的URI作为参数传入。
+:::
 关于*标题*还有一点要说，命令还可以定义图标，VS Code会显示在编辑器的标题菜单栏中。
 
 #### 示例
@@ -216,8 +224,10 @@ configuration是JSON格式的键值对，用户会在修改设置时获得对应
 
 配置快捷键绑定会使*默认键盘快捷方式*中显示你的规则，每一处和命令相关的UI部分也会显示你添加的快捷键组合。
 
-?>**注意**因为VS Code支持Windows，macOS和Linux平台，而
-
+<!-- ?>**注意** -->
+:::warning
+因为VS Code支持Windows，macOS和Linux平台，而
+:::
 #### 示例
 Windows和Linux下使用`Ctrl+F1`，macOS下使用`Cmd+F1`调用`"extension.sayHello"`命令：
 ```json

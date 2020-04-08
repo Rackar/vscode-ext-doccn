@@ -58,8 +58,10 @@
 - 请阅读[package.json插件清单](/extensibility-reference/extension-manifest.md)参考文档
 - 更多信息请参阅[package.json发布内容配置](/extensibility-reference/contribution-points.md)参考文档
 
-?> 译者注：为了便于理解，`contribution / contributes`在本教程中译为**发布内容配置/配置**，`contribution points`译为**发布内容配置点/配置点**。
-
+<!-- ?> 译者注： -->
+:::tip 译者注
+为了便于理解，`contribution / contributes`在本教程中译为**发布内容配置/配置**，`contribution points`译为**发布内容配置点/配置点**。
+:::
 **示例：基于TypeScript的pacakge.json**
 
 ```json
@@ -167,8 +169,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 !> 注意：VS Code具有解析sourcemap的能力，所以你可以直接在Typescript代码中调试。
 
-?>小提示：调试控制台(Debug Console)能输出所有console打印的日志。
-
+<!-- ?>小提示： -->
+:::tip 小提示
+调试控制台(Debug Console)能输出所有console打印的日志。
+:::
 查看更多关于插件[开发环境](/extension-authoring/developing-extensions.md)的东西。
 ## 小小的改造
 ---
