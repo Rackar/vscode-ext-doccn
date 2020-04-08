@@ -9,8 +9,8 @@
     "docs:build:gitpage": "export VUEPRESS_BASE=/vscode-ext-doccn/ || set VUEPRESS_BASE=/vscode-ext-doccn/ && vuepress build docs"
   },
   "license": "MIT",
-  "devDependencies": {
-    "vuepress": "^1.1.0"
-  },
-  "dependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "vuepress": "^1.4.0"
+  }
 }

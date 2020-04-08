@@ -1,95 +1,113 @@
-{
-  "/advanced-topics/": [
-    "extension-host",
-    "remote-extensions",
-    "using-proposed-api"
-  ],
-  "/api/": [
-    ""
-  ],
-  "/extensibility-reference/": [
-    "activation-events",
-    "api-debugging",
-    "api-markdown",
-    "api-scm",
-    "contribution-points",
-    "document-selectors",
-    "extension-manifest",
-    "language-extension-guidelines",
-    "overview",
-    "principles-patterns",
-    "vscode-api",
-    "vscode-api-commands"
-  ],
-  "/extension-authoring/": [
-    "developing-extensions",
-    "example-debug-adapter",
-    "example-hello-world",
-    "example-language-server",
-    "example-tasks",
-    "example-word-count",
-    "extension-generator",
-    "overview",
-    "publish-extension",
-    "samples",
-    "testing-extensions",
-    "themes-snippets-colorizers",
-    "webview-api"
-  ],
-  "/extension-capabilities/": [
-    "",
-    "common-capabilities",
-    "extending-workbench",
-    "theming"
-  ],
-  "/extension-guides/": [
-    "",
-    "color-theme",
-    "command",
-    "debugger-extension",
-    "icon-theme",
-    "markdown-extension",
-    "scm-provider",
-    "task-provider",
-    "tree-view",
-    "virtual-documents",
-    "webview"
-  ],
-  "/get-started/": [
-    "extension-anatomy",
-    "wrapping-up",
-    "your-first-extension"
-  ],
-  "/language-extensions/": [
-    "",
-    "language-configuration-guide",
-    "language-server-extension-guide",
-    "programmatic-language-features",
-    "snippet-guide",
-    "syntax-highlight-guide"
-  ],
-  "/preknowledge/": [
-    "class",
-    "declaration-files",
-    "first-step",
-    "generics",
-    "interface-and-namespace",
-    "variable-and-type"
-  ],
-  "/references/": [
-    "activation-events",
-    "commands",
-    "contribution-points",
-    "document-selector",
-    "extension-manifest",
-    "icons-in-labels",
-    "theme-color",
-    "vscode-api"
-  ],
-  "/working-with-extensions/": [
-    "bundling-extension",
-    "continuous-integration",
-    "publish-extension",
-    "testing-extension"
-  ]
-}
+[
+  {
+    "title": "◼️术语表和说明",
+    "path": "/",
+    "collapsable": false
+  },
+  {
+    "title": "◼️预备知识",
+    "path": "/preknowledge/first-step",
+    "collapsable": false,
+    "children": [
+      "/preknowledge/first-step",
+      "/preknowledge/variable-and-type",
+      "/preknowledge/class",
+      "/preknowledge/interface-and-namespace",
+      "/preknowledge/generics",
+      "/preknowledge/declaration-files"
+    ]
+  },
+  {
+    "title": "◼️概述",
+    "collapsable": false,
+    "path": "/api/"
+  },
+  {
+    "title": "◼️第一步",
+    "collapsable": false,
+    "path": "/get-started/your-first-extension",
+    "children": [
+      "/get-started/your-first-extension",
+      "/get-started/extension-anatomy",
+      "/get-started/wrapping-up"
+    ]
+  },
+  {
+    "title": "◼️开发插件",
+    "path": "/working-with-extensions/testing-extension",
+    "collapsable": false,
+    "children": [
+      "/working-with-extensions/testing-extension",
+      "/working-with-extensions/publish-extension",
+      "/working-with-extensions/bundling-extension",
+      "/working-with-extensions/continuous-integration"
+    ]
+  },
+  {
+    "title": "◼️插件功能",
+    "path": "/extension-capabilities/",
+    "collapsable": false,
+    "children": [
+      "/extension-capabilities/",
+      "/extension-capabilities/common-capabilities",
+      "/extension-capabilities/theming",
+      "/extension-capabilities/extending-workbench"
+    ]
+  },
+  {
+    "title": "◼️插件指南",
+    "path": "/extension-guides/",
+    "collapsable": false,
+    "children": [
+      "/extension-guides/",
+      "/extension-guides/command",
+      "/extension-guides/color-theme",
+      "/extension-guides/icon-theme",
+      "/extension-guides/tree-view",
+      "/extension-guides/webview",
+      "/extension-guides/virtual-documents",
+      "/extension-guides/task-provider",
+      "/extension-guides/scm-provider",
+      "/extension-guides/debugger-extension",
+      "/extension-guides/markdown-extension"
+    ]
+  },
+  {
+    "title": "◼️语言插件",
+    "path": "/language-extensions/",
+    "collapsable": false,
+    "children": [
+      "/language-extensions/",
+      "/language-extensions/syntax-highlight-guide",
+      "/language-extensions/snippet-guide",
+      "/language-extensions/language-configuration-guide",
+      "/language-extensions/programmatic-language-features",
+      "/language-extensions/language-server-extension-guide"
+    ]
+  },
+  {
+    "title": "◼️进阶主题",
+    "path": "/advanced-topics/extension-host",
+    "collapsable": false,
+    "children": [
+      "/advanced-topics/extension-host",
+      "/advanced-topics/remote-extensions",
+      "/advanced-topics/using-proposed-api"
+    ]
+  },
+  {
+    "title": "️️◼️参考",
+    "path": "/references/vscode-api",
+    "collapsable": false,
+    "children": [
+      "/references/vscode-api",
+      "/references/contribution-points",
+      "/references/activation-events",
+      "/references/extension-manifest",
+      "/references/commands",
+      "/references/theme-color",
+      "/references/icons-in-labels",
+      "/references/document-selector"
+    ]
+  }
+]
