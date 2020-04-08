@@ -2,9 +2,7 @@
   "name": "vs-code-ext-doc-zh",
   "version": "1.0.0",
   "scripts": {
-    "autopush": "node utils/getFilenames.js && vuepress build docs",
     "docs:dev": "vuepress dev docs",
-    "docs:list": "node utils/getFilenames.js",
     "docs:build": "vuepress build docs ",
     "docs:build:gitpage": "export VUEPRESS_BASE=/vscode-ext-doccn/ || set VUEPRESS_BASE=/vscode-ext-doccn/ && vuepress build docs"
   },
