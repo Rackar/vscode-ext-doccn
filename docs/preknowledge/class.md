@@ -1,4 +1,4 @@
-# 类
+# 认识TypeScript-类
 
 传统的JavaScript程序使用**函数**和基于**原型**的继承来创建可重用的组件。Typescript则在此基础上加入了语法糖**类**。
 
@@ -241,5 +241,5 @@ abstract class Animal {
 
 ## 下一步
 
-- [泛型和命名空间](/preknowledge/generics-and-modules.md) -  进一步了解Typescript所规定的语法
+- [泛型和命名空间](/preknowledge/interface-and-namespace.md) -  进一步了解Typescript所规定的语法
 
