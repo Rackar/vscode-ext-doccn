@@ -9,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "vuepress": "^1.4.0"
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-code-copy": "^1.0.6"
   }
 }

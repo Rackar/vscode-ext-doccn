@@ -19,7 +19,15 @@ module.exports = {
     editLinkText: '参与编辑此文章',
   },
 
-
+  plugins: [['vuepress-plugin-code-copy', {
+    // selector: String,
+    // align: String,
+    // color: String,
+    // backgroundTransition: Boolean,
+    // backgroundColor: String,
+    successText: '代码已复制',
+    // staticIcon:false,
+  }]],
   configureWebpack: {
     //webpack别名 如![Image from alias](~@alias/image.png)
     resolve: {
