@@ -18,7 +18,9 @@ module.exports = {
     editLinks: true,
     editLinkText: '参与编辑此文章',
   },
-
+  markdown: {
+    lineNumbers: true  //代码行号
+  },
   plugins: [['vuepress-plugin-code-copy', {
     // selector: String,
     // align: String,
