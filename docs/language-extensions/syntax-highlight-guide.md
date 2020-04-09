@@ -169,7 +169,10 @@ Yeoman通过问问题的方式最后生成新的插件，对于创建语法插�
 
 ![generated-new-language-extension](https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/generated-new-language-extension.png)
 
-!> 注意：如果你只是配置一个VS Code中已有语言的语法，记得删掉生成的`package.json`中的`languages`配置。
+<!-- !> 注意： -->
+:::warning 注意
+如果你只是配置一个VS Code中已有语言的语法，记得删掉生成的`package.json`中的`languages`配置。
+:::
 
 #### 迁移现成的TextMate语法
 

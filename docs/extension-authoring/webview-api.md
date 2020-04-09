@@ -475,8 +475,10 @@ function getWebviewContent() {
 
 哇！真是位高产的喵主子!
 
-!> webveiw的脚本能做到任何普通网页脚本能做到的事情，但是webview运行在自己的上下文中，脚本不能访问VS Code API。
-
+<!-- !>  -->
+:::warning 注意
+webveiw的脚本能做到任何普通网页脚本能做到的事情，但是webview运行在自己的上下文中，脚本不能访问VS Code API。
+:::
 #### 将插件的信息传递到webview
 
 插件可以用`webview.postMessage()`将数据发送到它的webview中。这个方法能发送任何序列化的JSON数据到webview中，在webview中则通过`message`事件接受信息。

@@ -278,8 +278,10 @@ vscode.commands.registerCommand('extension.mock-debug.getProgramName', config =>
 - `onDebugInitialConfigurations`：在`DebugConfigurationProvider`的`provideDebugConfigurations`调用前触发。
 - `onDebugResolve:type`：在`DebugConfigurationProvider`的`resolveDebugConfiguration`调用前触发。
 
-!> **首要准则**：如果插件的开销不大，就用`onDebug`。如果插件的开销比较高，根据`DebugConfigurationProvider`是否调用`provideDebugConfigurations`或`resolveDebugConfiguration`，在对应的`onDebugInitialConfigurations`或者`onDebugResolve`中处理。
-
+<!-- !> **首要准则**： -->
+:::warning 首要准则
+如果插件的开销不大，就用`onDebug`。如果插件的开销比较高，根据`DebugConfigurationProvider`是否调用`provideDebugConfigurations`或`resolveDebugConfiguration`，在对应的`onDebugInitialConfigurations`或者`onDebugResolve`中处理。
+:::
 ## 发布你的调试适配器
 ---
 

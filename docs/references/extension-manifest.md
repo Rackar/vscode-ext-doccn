@@ -297,7 +297,10 @@ The [Extension Manifest Editor](https://marketplace.visualstudio.com/items?itemN
 ```
 这个脚本会在插件完全卸载之后执行，也就是插件完全卸载之后——VS Code重载（关闭然后启动）之后执行。
 
-!> 注意：只支持Node.js脚本
+<!-- !> 注意： -->
+:::warning 注意
+只支持Node.js脚本
+:::
 
 下面有几个npmjs的Node.js 模块，可以帮你实现VS Code插件。你可以在插件的`dependencies`部分包含进去。
 

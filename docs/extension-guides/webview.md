@@ -593,7 +593,10 @@ function getWebviewContent() {
 
 哇！真是位高产的喵主子!
 
-!> webveiw的脚本能做到任何普通网页脚本能做到的事情，但是webview运行在自己的上下文中，脚本不能访问VS Code API。
+<!-- !>  -->
+:::warning 注意
+webveiw的脚本能做到任何普通网页脚本能做到的事情，但是webview运行在自己的上下文中，脚本不能访问VS Code API。
+:::
 
 ### 将插件的信息传递到webview
 

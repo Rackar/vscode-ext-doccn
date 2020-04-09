@@ -101,14 +101,20 @@
    }
 }
 ```
-!> 提示: 基于JavaScript的插件没有scripts部分，因为不需要编译。
-
+<!-- !> 提示:  -->
+:::tip 提示
+基于JavaScript的插件没有scripts部分，因为不需要编译。
+:::
 这份`package.json`文件说了什么呢？
 - **配置部分(contributes)**给*命令面板*定义了一个叫做`Hello world`的入口，它会调用'extension.sayHello'。
 - 当命令"extension.sayHello"调用时，执行`loaded`(激活事件)请求。
 - 在"`./out/extension.js`"中，存放着我们的主文件。
 
-!> 注意：VS Code **不会一启动就加载插件**。插件必须在`activationEvents`中描述它的启动时机，比如`loaded`事件。
+<!-- !> 注意： -->
+:::warning 注意
+VS Code **不会一启动就加载插件**。插件必须在`activationEvents`中描述它的启动时机，比如`loaded`事件。
+:::
+
 #### 生成的代码
 自动生成的代码存放在**extension.ts**（或者**extension.js**中）。
 ```typescript
@@ -139,7 +145,11 @@ export function activate(context: vscode.ExtensionContext) {
 - 如果插件使用了系统资源(如：生成进程），则需要从主文件中导出名为`deactive()`的函数去清理释放这些资源，VS Code会在关闭时调用这个方法。
 - 这个插件导入了VS Code API，然后注册了"extension.sayHello"命令和回调函数，执行后在VS Code中显示一条"Hello World!"消息。
 
-!> 注意： `package.json`的`contributes`部分给*命令面板*添加了一个调用入口。`extension.ts/.js`定义了`extension.sayHello`的实现。对于 Typescript类型的插件来说，生成的`out/extension.js`会在运行时加载。
+<!-- !> 注意：  -->
+:::warning 注意
+`package.json`的`contributes`部分给*命令面板*添加了一个调用入口。`extension.ts/.js`定义了`extension.sayHello`的实现。对于 Typescript类型的插件来说，生成的`out/extension.js`会在运行时加载。
+:::
+
 #### 其他文件
 - `vscode/launch.json` 告诉VS Code启用插件开发模式。它也描述了`.vscode/tasks.json`中需要Typescript编译器的预加载任务。
 - `vscode/settings.json` 默认排除外部文件夹。你如果想隐藏一些文件，可以修改这个配置。
@@ -167,8 +177,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 ![调试](https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensions/images/example-hello-world/hitbp.png)
 
-!> 注意：VS Code具有解析sourcemap的能力，所以你可以直接在Typescript代码中调试。
-
+<!-- !> 注意： -->
+:::warning 注意
+VS Code具有解析sourcemap的能力，所以你可以直接在Typescript代码中调试。
+:::
 <!-- ?>小提示： -->
 :::tip 小提示
 调试控制台(Debug Console)能输出所有console打印的日志。
@@ -193,8 +205,10 @@ let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
     vscode.window.showInformationMessage('Selected characters: ' + text.length);
 });
 ```
-!> 当你修改了代码，你需要按<kbd>Ctrl + R</kbd>(macOS <kbd>Cmd + R</kbd>)重启Extension Development Host，或者直接按VS Code上面的重启按钮
-
+<!-- !>  -->
+:::warning 注意
+当你修改了代码，你需要按<kbd>Ctrl + R</kbd>(macOS <kbd>Cmd + R</kbd>)重启Extension Development Host，或者直接按VS Code上面的重启按钮
+:::
 新建一个文件，输入一些文本然后选中。当你运行**Hello World**命令，你应该能看到字符计数的消息框。
 
 ![文字计数](https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensions/images/example-hello-world/selection-length.png)

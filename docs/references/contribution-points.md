@@ -421,8 +421,10 @@ language-configuration.json
 ---
 为一门语言配置TextMate语法。你必须提供应用语法的`language`，TextMate的`scopeName`确定了语法和文件路径。
 
-!>**注意：**包含语法的文件必须是JSON（以.json结尾的文件）或者XML的plist格式文件。
-
+<!-- !>**注意：** -->
+:::warning 注意
+包含语法的文件必须是JSON（以.json结尾的文件）或者XML的plist格式文件。
+:::
 #### 示例
 
 ```json
@@ -447,8 +449,10 @@ language-configuration.json
 ---
 为VS Code添加TextMate主题。你必须添加一个label，指定这个主题是dark还是light的（以便VS Code根据你的主题调整界面），当然还需要加上目标文件路径（XML plist 格式）。
 
-!>**注意：**包含语法的文件必须是JSON（以.json结尾的文件）或者XML的plist格式文件。
-
+<!-- !>**注意：** -->
+:::warning 注意
+包含语法的文件必须是JSON（以.json结尾的文件）或者XML的plist格式文件。
+:::
 #### 示例
 
 ```json

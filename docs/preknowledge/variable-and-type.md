@@ -224,7 +224,10 @@ let someValue: any = "this is a string";
 let strLength: number = (someValue as string).length;
 ```
 
-!> 注意：本章全部采用了let，const关键字，以及你接下来可以见到的所有例子中，都不再使用var声明变量，为了避免var带来的副作用和影响，我们更提倡使用新的关键字。
+<!-- !> 注意： -->
+:::warning 注意
+本章全部采用了let，const关键字，以及你接下来可以见到的所有例子中，都不再使用var声明变量，为了避免var带来的副作用和影响，我们更提倡使用新的关键字。
+:::
 
 ## 变量声明
 ---

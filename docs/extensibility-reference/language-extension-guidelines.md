@@ -841,8 +841,10 @@ export function activate(ctx: vscode.ExtensionContext): void {
 
 ![format-document-type](https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensionAPI/images/language-support/format-on-type.gif)
 
-!> **注意**：用户[设置](https://code.visualstudio.com/docs/getstarted/settings)中的`editor.formatOnType`控制着这项功能。
-
+<!-- !> **注意**： -->
+:::warning 注意
+用户[设置](https://code.visualstudio.com/docs/getstarted/settings)中的`editor.formatOnType`控制着这项功能。
+:::
 #### 通过语言服务器实现
 除了响应`initialize`方法外，语言服务器还要声明提供*用户输入格式化*特性。当然你的语言服务器还需要响应`textDocument/onTypeFormatting`请求。你还需要告诉客户端哪些字符可以触发这个特性，`moreTriggerCharacters`是个可选项。
 ```json
@@ -892,8 +894,10 @@ export function activate(ctx: vscode.ExtensionContext): void {
 
 ![color-decorators](https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensionAPI/images/language-support/color-decorators.png)
 
-!> **注意**：用户[设置](https://code.visualstudio.com/docs/getstarted/settings)中的`editor.formatOnType`控制着这项功能。
-
+<!-- !> **注意**： -->
+:::warning 注意
+用户[设置](https://code.visualstudio.com/docs/getstarted/settings)中的`editor.formatOnType`控制着这项功能。
+:::
 #### 通过语言服务器实现
 除了响应`initialize`方法外，语言服务器还要声明提供*用户输入格式化*特性。当然你的语言服务器还需要响应`textDocument/documentColor`和`textDocument/colorPresentation`请求。
 ```json

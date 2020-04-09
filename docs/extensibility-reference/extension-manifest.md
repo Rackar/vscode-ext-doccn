@@ -281,7 +281,10 @@ The [Extension Manifest Editor](https://marketplace.visualstudio.com/items?itemN
 ```
 这个脚本会在插件完全卸载之后执行，也就是插件完全卸载之后——VS Code重载（关闭然后启动）之后执行。
 
-!> 注意：只支持Node.js脚本
+<!-- !> 注意： -->
+:::warning 注意
+只支持Node.js脚本
+:::
 
 ## 使用 Node 模块
 ---

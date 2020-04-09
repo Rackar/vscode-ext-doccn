@@ -60,7 +60,10 @@ VS Code 允许插件创作者制作新的**调试器插件**，或为已有的�
 - `vscode.debug.onDidChangeBreakpoints`侦听断点的添加、移除、改变事件。
 - `SourceBreakpoints`和`FunctionBreakpoints`只能通过`addBreakpoints`和`removeBreakpoints`函数添加。
 
-!>注意：一开始获取断点可能是一个空数组，而随后则会触发`BreakpointsChangeEvent`事件并更新`vscode.debug.breakpoints`，在这个时间点你就能获得正确的集合。所以如果你需要正确的断点集合，不要忘了注册`BreakpointsChangeEvent`事件。
+<!-- !>注意： -->
+:::warning 注意
+一开始获取断点可能是一个空数组，而随后则会触发`BreakpointsChangeEvent`事件并更新`vscode.debug.breakpoints`，在这个时间点你就能获得正确的集合。所以如果你需要正确的断点集合，不要忘了注册`BreakpointsChangeEvent`事件。
+:::
 
 ## 调试适配器协议（DAP - Debug Adapter Protocol）
 ---

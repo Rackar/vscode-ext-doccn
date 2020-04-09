@@ -446,7 +446,10 @@ Yeoman生成的`vsc-extension-quickstart.md`文件包含了如何运行和debug�
 }
 ```
 
-!>注意：语言标识符是大小写敏感的（'Markdown' != 'markdown'）
+<!-- !>注意： -->
+:::warning 注意
+语言标识符是大小写敏感的（'Markdown' != 'markdown'）
+:::
 
 每个语言需要在发布内容配置点`languages`中定义它的*id*
 
