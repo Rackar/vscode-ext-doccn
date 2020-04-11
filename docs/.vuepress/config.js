@@ -4,6 +4,9 @@ module.exports = {
   title: "VS Code 插件开发中文文档",
   description: "Just playing around",
   base: process.env.VUEPRESS_BASE || "/",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
     nav: nav,
     // sidebar: 'auto', //自动侧边栏
