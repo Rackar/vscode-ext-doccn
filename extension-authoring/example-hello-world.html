@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>示例：Hello World | VS Code 插件开发中文文档</title>
+    <meta name="description" content="Just playing around">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/vscode-ext-doccn/favicon.ico">
+    
+    <link rel="preload" href="/vscode-ext-doccn/assets/css/0.styles.07dbe2c0.css" as="style"><link rel="preload" href="/vscode-ext-doccn/assets/js/app.67b099dc.js" as="script"><link rel="preload" href="/vscode-ext-doccn/assets/js/2.0c3262fa.js" as="script"><link rel="preload" href="/vscode-ext-doccn/assets/js/26.408021ba.js" as="script"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/10.53d4dc08.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/11.131c3385.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/12.f0c2812b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/13.867ab591.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/14.7286eeb4.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/15.e62d376f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/16.eb3c41f4.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/17.5341797c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/18.010e9a2d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/19.058a630c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/20.8cf7eaad.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/21.335c5e90.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/22.c9f32eaa.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/23.41b77e0d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/24.e3108057.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/25.d5de2954.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/27.e1161264.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/28.4e91e68a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/29.11223763.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/3.5682db39.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/30.173a131b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/31.6b6da818.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/32.bcc0da6f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/33.e5e6ed8e.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/34.d332d5ec.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/35.43317ea9.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/36.06b324a6.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/37.1371c1d2.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/38.546b9b78.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/39.d06c15ef.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/4.c611114a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/40.d660003c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/41.26fff1f5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/42.797b4334.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/43.764f9c94.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/44.dc01847d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/45.6e419c07.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/46.c8875656.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/47.307b5b3c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/48.efc69982.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/49.a526f801.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/5.918cd74b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/50.0a9a36e1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/51.baf68db8.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/52.bf3fb58a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/53.97ab9ec5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/54.2718dae1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/55.c0ec01e6.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/56.5affa465.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/57.6d2804cd.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/58.3cccd148.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/59.e75aba4f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/6.de55cb22.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/60.dd304eb7.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/61.991126b1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/62.6d841ee7.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/63.5bd614b9.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/64.dbe8f1da.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/65.9ee5d142.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/66.e0064173.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/67.229306c3.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/68.ecc0e67c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/69.0003d65a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/7.ad8cd07b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/70.3710317c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/71.29e2aea5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/72.cbf7131a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/73.a35e8890.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/74.2a2e1805.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/75.ef9d5302.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/76.b74f2677.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/77.72198b00.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/78.471bceab.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/79.62f27c5a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/8.25b85287.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/9.484942b7.js">
+    <link rel="stylesheet" href="/vscode-ext-doccn/assets/css/0.styles.07dbe2c0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vscode-ext-doccn/" class="home-link router-link-active"><!----> <span class="site-name">VS Code 插件开发中文文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 预备知识 " class="dropdown-title"><span class="title"> 预备知识 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/first-step.html" class="nav-link">
+  非JS开发者的第一步
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="nav-link">
+  Typescript-变量和类型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/class.html" class="nav-link">
+  Typescript-类
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="nav-link">
+  Typescript-接口和命名空间
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/generics.html" class="nav-link">
+  Typescript-泛型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="nav-link">
+  Typescript-声明文件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 第一步 " class="dropdown-title"><span class="title"> 第一步 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="nav-link">
+  你的第一个插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="nav-link">
+  解析插件结构
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="nav-link">
+  小结
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 开发插件 " class="dropdown-title"><span class="title"> 开发插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="nav-link">
+  测试插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="nav-link">
+  发布插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="nav-link">
+  打包插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="nav-link">
+  持续集成
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件功能 " class="dropdown-title"><span class="title"> 插件功能 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/readme.html" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="nav-link">
+  常用功能
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="nav-link">
+  主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="nav-link">
+  扩展工作台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件指南 " class="dropdown-title"><span class="title"> 插件指南 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/command.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="nav-link">
+  色彩主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="nav-link">
+  图标主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="nav-link">
+  树视图
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/webview.html" class="nav-link">
+  Webview
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="nav-link">
+  虚拟文档
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="nav-link">
+  任务
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="nav-link">
+  源控制
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="nav-link">
+  调试器插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="nav-link">
+  Markdown插件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 语言插件 " class="dropdown-title"><span class="title"> 语言插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="nav-link">
+  语法高亮
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="nav-link">
+  代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="nav-link">
+  语言配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="nav-link">
+  程序性语言特性
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="nav-link">
+  语言服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 进阶主题 " class="dropdown-title"><span class="title"> 进阶主题 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="nav-link">
+  插件主机
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="nav-link">
+  远程开发
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="nav-link">
+  使用不稳定的API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="参考 " class="dropdown-title"><span class="title">参考 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/vscode-api.html" class="nav-link">
+  VS Code API
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/contribution-points.html" class="nav-link">
+  发布内容配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/activation-events.html" class="nav-link">
+  激活事件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/extension-manifest.html" class="nav-link">
+  插件清单
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/commands.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/theme-color.html" class="nav-link">
+  主题色彩
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/icons -in -labels.html" class="nav-link">
+  标签中的图标
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/document-selector.html" class="nav-link">
+  文档选择器
+</a></li></ul></div></div> <a href="https://github.com/Rackar/vscode-ext-doccn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 预备知识 " class="dropdown-title"><span class="title"> 预备知识 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/first-step.html" class="nav-link">
+  非JS开发者的第一步
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="nav-link">
+  Typescript-变量和类型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/class.html" class="nav-link">
+  Typescript-类
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="nav-link">
+  Typescript-接口和命名空间
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/generics.html" class="nav-link">
+  Typescript-泛型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="nav-link">
+  Typescript-声明文件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 第一步 " class="dropdown-title"><span class="title"> 第一步 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="nav-link">
+  你的第一个插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="nav-link">
+  解析插件结构
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="nav-link">
+  小结
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 开发插件 " class="dropdown-title"><span class="title"> 开发插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="nav-link">
+  测试插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="nav-link">
+  发布插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="nav-link">
+  打包插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="nav-link">
+  持续集成
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件功能 " class="dropdown-title"><span class="title"> 插件功能 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/readme.html" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="nav-link">
+  常用功能
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="nav-link">
+  主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="nav-link">
+  扩展工作台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件指南 " class="dropdown-title"><span class="title"> 插件指南 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/command.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="nav-link">
+  色彩主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="nav-link">
+  图标主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="nav-link">
+  树视图
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/webview.html" class="nav-link">
+  Webview
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="nav-link">
+  虚拟文档
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="nav-link">
+  任务
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="nav-link">
+  源控制
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="nav-link">
+  调试器插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="nav-link">
+  Markdown插件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 语言插件 " class="dropdown-title"><span class="title"> 语言插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="nav-link">
+  语法高亮
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="nav-link">
+  代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="nav-link">
+  语言配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="nav-link">
+  程序性语言特性
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="nav-link">
+  语言服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 进阶主题 " class="dropdown-title"><span class="title"> 进阶主题 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="nav-link">
+  插件主机
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="nav-link">
+  远程开发
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="nav-link">
+  使用不稳定的API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="参考 " class="dropdown-title"><span class="title">参考 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/vscode-api.html" class="nav-link">
+  VS Code API
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/contribution-points.html" class="nav-link">
+  发布内容配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/activation-events.html" class="nav-link">
+  激活事件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/extension-manifest.html" class="nav-link">
+  插件清单
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/commands.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/theme-color.html" class="nav-link">
+  主题色彩
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/icons -in -labels.html" class="nav-link">
+  标签中的图标
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/document-selector.html" class="nav-link">
+  文档选择器
+</a></li></ul></div></div> <a href="https://github.com/Rackar/vscode-ext-doccn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vscode-ext-doccn/" class="sidebar-link">◼️术语表和说明</a></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/preknowledge/first-step" class="sidebar-heading clickable"><span>◼️预备知识</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/preknowledge/first-step.html" class="sidebar-link">非JS开发者的第一步</a></li><li><a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="sidebar-link">认识TypeScript-变量和类型</a></li><li><a href="/vscode-ext-doccn/preknowledge/class.html" class="sidebar-link">认识TypeScript-类</a></li><li><a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="sidebar-link">认识TypeScript-类型接口和命名空间</a></li><li><a href="/vscode-ext-doccn/preknowledge/generics.html" class="sidebar-link">认识 Typescript-泛型</a></li><li><a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="sidebar-link">声明文件</a></li></ul></section></li><li><a href="/vscode-ext-doccn/api/" class="sidebar-link">◼️概述</a></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/get-started/your-first-extension" class="sidebar-heading clickable"><span>◼️第一步</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="sidebar-link">你的第一个插件</a></li><li><a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="sidebar-link">解析插件结构</a></li><li><a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="sidebar-link">小结</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/working-with-extensions/testing-extension" class="sidebar-heading clickable"><span>◼️开发插件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="sidebar-link">测试插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="sidebar-link">发布插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="sidebar-link">打包插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="sidebar-link">持续集成</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/extension-capabilities/" class="sidebar-heading clickable"><span>◼️插件功能</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-capabilities/" class="sidebar-link">插件功能</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="sidebar-link">常用功能</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="sidebar-link">主题</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="sidebar-link">扩展工作台</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/extension-guides/" class="sidebar-heading clickable"><span>◼️插件指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-guides/" class="sidebar-link">插件指南</a></li><li><a href="/vscode-ext-doccn/extension-guides/command.html" class="sidebar-link">命令</a></li><li><a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="sidebar-link">色彩主题</a></li><li><a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="sidebar-link">图标主题</a></li><li><a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="sidebar-link">树视图</a></li><li><a href="/vscode-ext-doccn/extension-guides/webview.html" class="sidebar-link">Webview API</a></li><li><a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="sidebar-link">虚拟文档</a></li><li><a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="sidebar-link">任务</a></li><li><a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="sidebar-link">源控制API</a></li><li><a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="sidebar-link">调试器插件</a></li><li><a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="sidebar-link">Markdown插件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/language-extensions/" class="sidebar-heading clickable"><span>◼️语言插件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/language-extensions/" class="sidebar-link">概述</a></li><li><a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="sidebar-link">语法高亮</a></li><li><a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="sidebar-link">代码片段</a></li><li><a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="sidebar-link">语言配置</a></li><li><a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="sidebar-link">程序性语言特性</a></li><li><a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="sidebar-link">示例：语言服务器</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/advanced-topics/extension-host" class="sidebar-heading clickable"><span>◼️进阶主题</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="sidebar-link">插件主机</a></li><li><a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="sidebar-link">支持远程开发</a></li><li><a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="sidebar-link">使用不稳定的API</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/references/vscode-api" class="sidebar-heading clickable"><span>️️◼️参考</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/references/vscode-api.html" class="sidebar-link">VS Code API</a></li><li><a href="/vscode-ext-doccn/references/contribution-points.html" class="sidebar-link">发布内容配置</a></li><li><a href="/vscode-ext-doccn/references/activation-events.html" class="sidebar-link">激活事件</a></li><li><a href="/vscode-ext-doccn/references/extension-manifest.html" class="sidebar-link">插件清单</a></li><li><a href="/vscode-ext-doccn/references/commands.html" class="sidebar-link">内置命令</a></li><li><a href="/vscode-ext-doccn/references/theme-color.html" class="sidebar-link">主题色彩</a></li><li><a href="/vscode-ext-doccn/references/icons-in-labels.html" class="sidebar-link">标签中的图标</a></li><li><a href="/vscode-ext-doccn/references/document-selector.html" class="sidebar-link">文档选择器</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/overview" class="sidebar-heading clickable"><span>插件介绍（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world" class="sidebar-heading clickable open active"><span>从示例开始（第一版）</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html" class="active sidebar-link">示例：Hello World</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#你的第一个插件" class="sidebar-link">你的第一个插件</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#运行插件" class="sidebar-link">运行插件</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#插件的目录结构" class="sidebar-link">插件的目录结构</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#插件激活过程" class="sidebar-link">插件激活过程</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#调试插件" class="sidebar-link">调试插件</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#小小的改造" class="sidebar-link">小小的改造</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#在本地安装你的插件" class="sidebar-link">在本地安装你的插件</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#发布插件" class="sidebar-link">发布插件</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world.html#下一步" class="sidebar-link">下一步</a></li></ul></li><li><a href="/vscode-ext-doccn/extension-authoring/example-word-count.html" class="sidebar-link">示例 Word Count</a></li><li><a href="/vscode-ext-doccn/extension-authoring/example-language-server.html" class="sidebar-link">示例：语言服务器</a></li><li><a href="/vscode-ext-doccn/extension-authoring/example-debug-adapter.html" class="sidebar-link">示例-调试适配器</a></li><li><a href="/vscode-ext-doccn/extension-authoring/example-tasks.html" class="sidebar-link">示例-任务</a></li><li><a href="/vscode-ext-doccn/extension-authoring/samples.html" class="sidebar-link">VS Code 插件示例</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/developing-extensions" class="sidebar-heading clickable"><span>开发步骤（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/webview-api" class="sidebar-heading clickable"><span>进阶（第一版）</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="示例：hello-world"><a href="#示例：hello-world" class="header-anchor">#</a> 示例：Hello World</h1> <h2 id="你的第一个插件"><a href="#你的第一个插件" class="header-anchor">#</a> 你的第一个插件</h2> <hr> <p>本节通过Hello World这个完整的项目手把手教你掌握VS Code扩展性概念。
+在本项目中，我们会给VS Code添加一个新的命令，虽然只是用来显示&quot;Hello World&quot;信息。在本节的最后，你将和编辑器编辑器互动，查找用户选中的文本。</p> <h4 id="预备工作"><a href="#预备工作" class="header-anchor">#</a> 预备工作</h4> <p>请查看<a href="/extension-authoring/extension-generator?id=%E9%A2%84%E5%85%88%E5%87%86%E5%A4%87">生成插件-预备工作</a></p> <h4 id="生成新插件"><a href="#生成新插件" class="header-anchor">#</a> 生成新插件</h4> <p>请查看<a href="/extension-authoring/extension-generator?id=%E8%BF%90%E8%A1%8Cyo-code%F0%9F%98%8E">生成插件-运行Yo</a></p> <h2 id="运行插件"><a href="#运行插件" class="header-anchor">#</a> 运行插件</h2> <hr> <ul><li>打开VS Code，选择<code>文件</code>&gt;<code>打开文件夹</code>，选择你刚刚生成的项目目录</li> <li>点击<code>F5</code>或者<code>Debug</code>按钮，然后点击<code>开始</code></li> <li>新的VS Code实例会运行在特殊环境中（<code>Extension Development Host</code></li> <li>按下<code>⇧⌘P</code>(windows <code>shift + ctrl + p</code>)，输入命令<code>Hello world</code></li> <li>恭喜！你的第一个VS Code插件执行成功了</li></ul> <p><img src="https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensions/images/example-hello-world/running.png" alt=""></p> <h2 id="插件的目录结构"><a href="#插件的目录结构" class="header-anchor">#</a> 插件的目录结构</h2> <hr> <p>构建完毕之后，你的插件开发目录看起来应该是这样的</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.
+├── .gitignore
+├── .vscode                     // VS Code 文件
+│   ├── launch.json
+│   ├── settings.json
+│   └── tasks.json
+├── .vscodeignore               // 发布插件时忽略的文件
+├── README.md
+├── src
+│   └── extension.ts            // 插件的入口（源文件）
+├── test                        // 测试文件夹
+│   ├── extension.test.ts       // extension.test.js, 如果是 JavaScript 插件的话
+│   └── index.ts                // index.js, 如果是 JavaScript 插件的话
+├── node_modules
+│   ├── vscode                  // 包含了vscode插件开发时的类型定义文件
+│   └── typescript              // typescript的编译器 (TypeScript only)
+├── out                         // 编译出口 (TypeScript only)
+│   ├── extension.js            // 插件入口
+│   ├── extension.js.map
+│   └── test
+│       ├── extension.test.js
+│       ├── extension.test.js.map
+│       ├── index.js
+│       └── index.js.map
+├── package.json                // 插件清单
+├── tsconfig.json               // jsconfig.json, 如果是 JavaScript 插件的话
+└── vsc-extension-quickstart.md // 快速上手插件开发
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>让我们看看这些文件夹都是干什么用的：</p> <h4 id="插件清单：package-json"><a href="#插件清单：package-json" class="header-anchor">#</a> 插件清单：<code>package.json</code></h4> <ul><li>每个VS Code插件都有<code>package.json</code>文件，文件内包含了这个插件功能和用处。</li> <li>当项目启动时，VS Code会立即读取这个文件中的每个<code>配置(contributes)</code>部分并作出响应。</li> <li>请阅读<a href="/vscode-ext-doccn/extensibility-reference/extension-manifest.html">package.json插件清单</a>参考文档</li> <li>更多信息请参阅<a href="/vscode-ext-doccn/extensibility-reference/contribution-points.html">package.json发布内容配置</a>参考文档</li></ul> <div class="custom-block tip"><p class="custom-block-title">译者注</p> <p>为了便于理解，<code>contribution / contributes</code>在本教程中译为<strong>发布内容配置/配置</strong>，<code>contribution points</code>译为<strong>发布内容配置点/配置点</strong>。</p></div> <p><strong>示例：基于TypeScript的pacakge.json</strong></p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;myFirstExtension&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;publisher&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;engines&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;vscode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.5.0&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;categories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;Other&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;activationEvents&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;onCommand:extension.sayHello&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./out/extension&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;commands&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;command&quot;</span><span class="token operator">:</span> <span class="token string">&quot;extension.sayHello&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Hello World&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;vscode:prepublish&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tsc -p ./&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;compile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tsc -watch -p ./&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;postinstall&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node ./node_modules/vscode/bin/install&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node ./node_modules/vscode/bin/test&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+       <span class="token property">&quot;typescript&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.3&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;vscode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.5.0&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.3.3&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;@types/node&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.0.40&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;@types/mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.2.32&quot;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>基于JavaScript的插件没有scripts部分，因为不需要编译。</p></div> <p>这份<code>package.json</code>文件说了什么呢？</p> <ul><li>**配置部分(contributes)**给<em>命令面板</em>定义了一个叫做<code>Hello world</code>的入口，它会调用'extension.sayHello'。</li> <li>当命令&quot;extension.sayHello&quot;调用时，执行<code>loaded</code>(激活事件)请求。</li> <li>在&quot;<code>./out/extension.js</code>&quot;中，存放着我们的主文件。</li></ul> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>VS Code <strong>不会一启动就加载插件</strong>。插件必须在<code>activationEvents</code>中描述它的启动时机，比如<code>loaded</code>事件。</p></div> <h4 id="生成的代码"><a href="#生成的代码" class="header-anchor">#</a> 生成的代码</h4> <p>自动生成的代码存放在<strong>extension.ts</strong>（或者<strong>extension.js</strong>中）。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token comment">// 'vscode'模块包含了VS Code extensibility API</span>
+<span class="token comment">// 按下述方式导入这个模块</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 一旦你的插件激活，vscode会立刻调用下述方法</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// 用console输出诊断信息(console.log)和错误(console.error)</span>
+    <span class="token comment">// 下面的代码只会在你的插件激活时执行一次</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Congratulations, your extension &quot;my-first-extension&quot; is now active!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 入口命令已经在package.json文件中定义好了，现在调用registerCommand方法</span>
+    <span class="token comment">// registerCommand中的参数必须与package.json中的command保持一致</span>
+    <span class="token keyword">let</span> disposable <span class="token operator">=</span> vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'extension.sayHello'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 把你的代码写在这里，每次命令执行时都会调用这里的代码</span>
+        <span class="token comment">// ...</span>
+        <span class="token comment">// 给用户显示一个消息提示</span>
+        vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">showInformationMessage</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>disposable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ul><li>每个插件都应该在主文件中注册一个<code>activate()</code>函数，因为这个函数只会调用一次。你只有<code>在package.json</code>中注册了<code>activationEvents</code>列表中的事件，激活事件才会被调用。</li> <li>如果插件使用了系统资源(如：生成进程），则需要从主文件中导出名为<code>deactive()</code>的函数去清理释放这些资源，VS Code会在关闭时调用这个方法。</li> <li>这个插件导入了VS Code API，然后注册了&quot;extension.sayHello&quot;命令和回调函数，执行后在VS Code中显示一条&quot;Hello World!&quot;消息。</li></ul> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p><code>package.json</code>的<code>contributes</code>部分给<em>命令面板</em>添加了一个调用入口。<code>extension.ts/.js</code>定义了<code>extension.sayHello</code>的实现。对于 Typescript类型的插件来说，生成的<code>out/extension.js</code>会在运行时加载。</p></div> <h4 id="其他文件"><a href="#其他文件" class="header-anchor">#</a> 其他文件</h4> <ul><li><code>vscode/launch.json</code> 告诉VS Code启用插件开发模式。它也描述了<code>.vscode/tasks.json</code>中需要Typescript编译器的预加载任务。</li> <li><code>vscode/settings.json</code> 默认排除外部文件夹。你如果想隐藏一些文件，可以修改这个配置。</li> <li><code>gitignore</code> - 告诉git不跟踪哪些文件。</li> <li><code>vscodeignore</code> - 告诉打包工具，发布插件时应该忽略哪些文件。</li> <li><code>README.md</code> - 为插件的使用用户提供良好的文档。</li> <li><code>vsc-extension-quickstart.md</code> - 你的快速开始指南。</li> <li><code>test/extension.test.ts</code> - 把你的单元测试放在这里，看看和VS Code API有哪些出入。</li></ul> <h2 id="插件激活过程"><a href="#插件激活过程" class="header-anchor">#</a> 插件激活过程</h2> <hr> <p>我们刚刚已经了解了开发目录下的每个文件，现在我们看看你的插件是怎么运行起来的：</p> <ol><li>插件开发环境发现了这个插件，然后读取它的<code>package.json</code></li> <li>你按下<code>ctrl shift p</code>时，<em>命令面板</em>显示出已注册的命令列表</li> <li>在列表中你找到<code>package.json</code>中定义的<code>Hello world</code>命令入口</li> <li>选中并执行<code>Hello world</code>，随即执行真实的&quot;<code>extension.sayHello</code>&quot;命令
+<ul><li>创建<code>&quot;onCommand:extension.sayHello&quot;</code>激活事件</li> <li>激活所有注册在<code>activationEvents</code>的事件
+<ul><li>Javascript虚拟机加载<code>./out/extension.js</code>文件</li> <li>VS Code查找导出的<code>activate</code>函数，并调用</li></ul></li></ul></li> <li>调用<code>&quot;extension.sayHello&quot;</code>注册的函数</li> <li>函数执行，显示出&quot;Hello world&quot;消息</li></ol> <h2 id="调试插件"><a href="#调试插件" class="header-anchor">#</a> 调试插件</h2> <hr> <p>直接在你的代码里打上断点就可以调试了，很简单吧。</p> <p><img src="https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensions/images/example-hello-world/hitbp.png" alt="调试"></p> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>VS Code具有解析sourcemap的能力，所以你可以直接在Typescript代码中调试。</p></div> <div class="custom-block tip"><p class="custom-block-title">小提示</p> <p>调试控制台(Debug Console)能输出所有console打印的日志。</p></div> <p>查看更多关于插件<a href="/vscode-ext-doccn/extension-authoring/developing-extensions.html">开发环境</a>的东西。</p> <h2 id="小小的改造"><a href="#小小的改造" class="header-anchor">#</a> 小小的改造</h2> <hr> <p>试着修改你的<code>extension.ts</code>（或者<code>extension.js</code>）中<code>extension.sayHello</code>的实现，我们把它改造成一个对选中文本计数的功能。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">let</span> disposable <span class="token operator">=</span> vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'extension.sayHello'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 每当你执行命令，这里的代码都会执行一次</span>
+
+    <span class="token keyword">let</span> editor <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span>activeTextEditor<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>editor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// 没有打开的编辑器</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> selection <span class="token operator">=</span> editor<span class="token punctuation">.</span>selection<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> text <span class="token operator">=</span> editor<span class="token punctuation">.</span>document<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span>selection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 给用户一个消息提示框</span>
+    vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">showInformationMessage</span><span class="token punctuation">(</span><span class="token string">'Selected characters: '</span> <span class="token operator">+</span> text<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>当你修改了代码，你需要按<kbd>Ctrl + R</kbd>(macOS <kbd>Cmd + R</kbd>)重启Extension Development Host，或者直接按VS Code上面的重启按钮</p></div> <p>新建一个文件，输入一些文本然后选中。当你运行<strong>Hello World</strong>命令，你应该能看到字符计数的消息框。</p> <p><img src="https://raw.githubusercontent.com/Microsoft/vscode-docs/master/docs/extensions/images/example-hello-world/selection-length.png" alt="文字计数"></p> <h2 id="在本地安装你的插件"><a href="#在本地安装你的插件" class="header-anchor">#</a> 在本地安装你的插件</h2> <hr> <p>好了，现在你已经完成了一个运行在开发模式下的插件，为了让你的插件运行在所有VS Code实例中，你需要在本地插件目录下新建一个文件夹，然后复制过去：</p> <ul><li>Windows: <code>%USERPROFILE%\.vscode\extensions</code></li> <li>macOS/Linux: <code>$HOME\.vscode\extensions</code></li></ul> <h2 id="发布插件"><a href="#发布插件" class="header-anchor">#</a> 发布插件</h2> <hr> <p>参阅<a href="/vscode-ext-doccn/extension-authoring/publish-extension.html">分享插件</a></p> <h2 id="下一步"><a href="#下一步" class="header-anchor">#</a> 下一步</h2> <hr> <p>在本篇指引中，我们实现了一个小小的插件。在<a href="/vscode-ext-doccn/extension-authoring/docs/extension-authoring/example-word-count.html">示例-Word Count</a>中你能找到完整的例子，学习如何在Markdown文件中监听编辑器的文档变动事件、显示文本字数。</p> <p>如果你想查看更多extension API的概述，看看这些主题吧：</p> <ul><li><a href="/vscode-ext-doccn/extensibility-reference/overview.html">Extension API 概览</a> - 了解完整的VS Code扩展性模型。</li> <li><a href="/vscode-ext-doccn/extensibility-reference/principles-patterns.html">API原则和模式</a> - VS Code的扩展性基于这些指导性原则和模式。</li> <li><a href="/vscode-ext-doccn/extensibility-reference/contribution-points.html">发布内容配置</a> - 各种各样的VS Code发布内容配置项</li> <li><a href="/vscode-ext-doccn/extensibility-reference/activation-events.html">激活事件</a> - VS Code激活事件参考</li> <li><a href="/vscode-ext-doccn/extension-authoring/samples.html">更多插件示例</a> - 看看我们的插件示例列表</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Rackar/vscode-ext-doccn/edit/vuepress/docs/extension-authoring/example-hello-world.md" target="_blank" rel="noopener noreferrer">参与编辑此文章</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">4/9/2020, 4:21:14 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vscode-ext-doccn/extension-authoring/themes-snippets-colorizers.html" class="prev">
+        主题，代码片段和着色器
+      </a></span> <span class="next"><a href="/vscode-ext-doccn/extension-authoring/example-word-count.html">
+        示例 Word Count
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vscode-ext-doccn/assets/js/app.67b099dc.js" defer></script><script src="/vscode-ext-doccn/assets/js/2.0c3262fa.js" defer></script><script src="/vscode-ext-doccn/assets/js/26.408021ba.js" defer></script>
+  </body>
+</html>

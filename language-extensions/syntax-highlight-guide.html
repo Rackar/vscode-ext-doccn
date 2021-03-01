@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>语法高亮 | VS Code 插件开发中文文档</title>
+    <meta name="description" content="Just playing around">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/vscode-ext-doccn/favicon.ico">
+    
+    <link rel="preload" href="/vscode-ext-doccn/assets/css/0.styles.07dbe2c0.css" as="style"><link rel="preload" href="/vscode-ext-doccn/assets/js/app.67b099dc.js" as="script"><link rel="preload" href="/vscode-ext-doccn/assets/js/2.0c3262fa.js" as="script"><link rel="preload" href="/vscode-ext-doccn/assets/js/60.dd304eb7.js" as="script"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/10.53d4dc08.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/11.131c3385.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/12.f0c2812b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/13.867ab591.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/14.7286eeb4.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/15.e62d376f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/16.eb3c41f4.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/17.5341797c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/18.010e9a2d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/19.058a630c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/20.8cf7eaad.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/21.335c5e90.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/22.c9f32eaa.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/23.41b77e0d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/24.e3108057.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/25.d5de2954.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/26.408021ba.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/27.e1161264.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/28.4e91e68a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/29.11223763.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/3.5682db39.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/30.173a131b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/31.6b6da818.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/32.bcc0da6f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/33.e5e6ed8e.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/34.d332d5ec.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/35.43317ea9.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/36.06b324a6.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/37.1371c1d2.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/38.546b9b78.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/39.d06c15ef.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/4.c611114a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/40.d660003c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/41.26fff1f5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/42.797b4334.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/43.764f9c94.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/44.dc01847d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/45.6e419c07.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/46.c8875656.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/47.307b5b3c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/48.efc69982.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/49.a526f801.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/5.918cd74b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/50.0a9a36e1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/51.baf68db8.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/52.bf3fb58a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/53.97ab9ec5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/54.2718dae1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/55.c0ec01e6.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/56.5affa465.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/57.6d2804cd.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/58.3cccd148.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/59.e75aba4f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/6.de55cb22.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/61.991126b1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/62.6d841ee7.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/63.5bd614b9.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/64.dbe8f1da.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/65.9ee5d142.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/66.e0064173.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/67.229306c3.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/68.ecc0e67c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/69.0003d65a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/7.ad8cd07b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/70.3710317c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/71.29e2aea5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/72.cbf7131a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/73.a35e8890.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/74.2a2e1805.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/75.ef9d5302.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/76.b74f2677.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/77.72198b00.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/78.471bceab.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/79.62f27c5a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/8.25b85287.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/9.484942b7.js">
+    <link rel="stylesheet" href="/vscode-ext-doccn/assets/css/0.styles.07dbe2c0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vscode-ext-doccn/" class="home-link router-link-active"><!----> <span class="site-name">VS Code 插件开发中文文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 预备知识 " class="dropdown-title"><span class="title"> 预备知识 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/first-step.html" class="nav-link">
+  非JS开发者的第一步
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="nav-link">
+  Typescript-变量和类型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/class.html" class="nav-link">
+  Typescript-类
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="nav-link">
+  Typescript-接口和命名空间
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/generics.html" class="nav-link">
+  Typescript-泛型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="nav-link">
+  Typescript-声明文件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 第一步 " class="dropdown-title"><span class="title"> 第一步 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="nav-link">
+  你的第一个插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="nav-link">
+  解析插件结构
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="nav-link">
+  小结
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 开发插件 " class="dropdown-title"><span class="title"> 开发插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="nav-link">
+  测试插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="nav-link">
+  发布插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="nav-link">
+  打包插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="nav-link">
+  持续集成
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件功能 " class="dropdown-title"><span class="title"> 插件功能 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/readme.html" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="nav-link">
+  常用功能
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="nav-link">
+  主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="nav-link">
+  扩展工作台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件指南 " class="dropdown-title"><span class="title"> 插件指南 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/command.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="nav-link">
+  色彩主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="nav-link">
+  图标主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="nav-link">
+  树视图
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/webview.html" class="nav-link">
+  Webview
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="nav-link">
+  虚拟文档
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="nav-link">
+  任务
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="nav-link">
+  源控制
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="nav-link">
+  调试器插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="nav-link">
+  Markdown插件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 语言插件 " class="dropdown-title"><span class="title"> 语言插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/" class="nav-link router-link-active">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="nav-link router-link-exact-active router-link-active">
+  语法高亮
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="nav-link">
+  代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="nav-link">
+  语言配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="nav-link">
+  程序性语言特性
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="nav-link">
+  语言服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 进阶主题 " class="dropdown-title"><span class="title"> 进阶主题 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="nav-link">
+  插件主机
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="nav-link">
+  远程开发
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="nav-link">
+  使用不稳定的API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="参考 " class="dropdown-title"><span class="title">参考 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/vscode-api.html" class="nav-link">
+  VS Code API
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/contribution-points.html" class="nav-link">
+  发布内容配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/activation-events.html" class="nav-link">
+  激活事件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/extension-manifest.html" class="nav-link">
+  插件清单
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/commands.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/theme-color.html" class="nav-link">
+  主题色彩
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/icons -in -labels.html" class="nav-link">
+  标签中的图标
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/document-selector.html" class="nav-link">
+  文档选择器
+</a></li></ul></div></div> <a href="https://github.com/Rackar/vscode-ext-doccn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 预备知识 " class="dropdown-title"><span class="title"> 预备知识 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/first-step.html" class="nav-link">
+  非JS开发者的第一步
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="nav-link">
+  Typescript-变量和类型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/class.html" class="nav-link">
+  Typescript-类
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="nav-link">
+  Typescript-接口和命名空间
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/generics.html" class="nav-link">
+  Typescript-泛型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="nav-link">
+  Typescript-声明文件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 第一步 " class="dropdown-title"><span class="title"> 第一步 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="nav-link">
+  你的第一个插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="nav-link">
+  解析插件结构
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="nav-link">
+  小结
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 开发插件 " class="dropdown-title"><span class="title"> 开发插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="nav-link">
+  测试插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="nav-link">
+  发布插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="nav-link">
+  打包插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="nav-link">
+  持续集成
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件功能 " class="dropdown-title"><span class="title"> 插件功能 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/readme.html" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="nav-link">
+  常用功能
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="nav-link">
+  主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="nav-link">
+  扩展工作台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件指南 " class="dropdown-title"><span class="title"> 插件指南 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/command.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="nav-link">
+  色彩主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="nav-link">
+  图标主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="nav-link">
+  树视图
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/webview.html" class="nav-link">
+  Webview
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="nav-link">
+  虚拟文档
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="nav-link">
+  任务
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="nav-link">
+  源控制
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="nav-link">
+  调试器插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="nav-link">
+  Markdown插件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 语言插件 " class="dropdown-title"><span class="title"> 语言插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/" class="nav-link router-link-active">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="nav-link router-link-exact-active router-link-active">
+  语法高亮
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="nav-link">
+  代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="nav-link">
+  语言配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="nav-link">
+  程序性语言特性
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="nav-link">
+  语言服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 进阶主题 " class="dropdown-title"><span class="title"> 进阶主题 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="nav-link">
+  插件主机
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="nav-link">
+  远程开发
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="nav-link">
+  使用不稳定的API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="参考 " class="dropdown-title"><span class="title">参考 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/vscode-api.html" class="nav-link">
+  VS Code API
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/contribution-points.html" class="nav-link">
+  发布内容配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/activation-events.html" class="nav-link">
+  激活事件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/extension-manifest.html" class="nav-link">
+  插件清单
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/commands.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/theme-color.html" class="nav-link">
+  主题色彩
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/icons -in -labels.html" class="nav-link">
+  标签中的图标
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/document-selector.html" class="nav-link">
+  文档选择器
+</a></li></ul></div></div> <a href="https://github.com/Rackar/vscode-ext-doccn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vscode-ext-doccn/" class="sidebar-link">◼️术语表和说明</a></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/preknowledge/first-step" class="sidebar-heading clickable"><span>◼️预备知识</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/preknowledge/first-step.html" class="sidebar-link">非JS开发者的第一步</a></li><li><a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="sidebar-link">认识TypeScript-变量和类型</a></li><li><a href="/vscode-ext-doccn/preknowledge/class.html" class="sidebar-link">认识TypeScript-类</a></li><li><a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="sidebar-link">认识TypeScript-类型接口和命名空间</a></li><li><a href="/vscode-ext-doccn/preknowledge/generics.html" class="sidebar-link">认识 Typescript-泛型</a></li><li><a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="sidebar-link">声明文件</a></li></ul></section></li><li><a href="/vscode-ext-doccn/api/" class="sidebar-link">◼️概述</a></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/get-started/your-first-extension" class="sidebar-heading clickable"><span>◼️第一步</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="sidebar-link">你的第一个插件</a></li><li><a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="sidebar-link">解析插件结构</a></li><li><a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="sidebar-link">小结</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/working-with-extensions/testing-extension" class="sidebar-heading clickable"><span>◼️开发插件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="sidebar-link">测试插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="sidebar-link">发布插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="sidebar-link">打包插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="sidebar-link">持续集成</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/extension-capabilities/" class="sidebar-heading clickable"><span>◼️插件功能</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-capabilities/" class="sidebar-link">插件功能</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="sidebar-link">常用功能</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="sidebar-link">主题</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="sidebar-link">扩展工作台</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/extension-guides/" class="sidebar-heading clickable"><span>◼️插件指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-guides/" class="sidebar-link">插件指南</a></li><li><a href="/vscode-ext-doccn/extension-guides/command.html" class="sidebar-link">命令</a></li><li><a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="sidebar-link">色彩主题</a></li><li><a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="sidebar-link">图标主题</a></li><li><a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="sidebar-link">树视图</a></li><li><a href="/vscode-ext-doccn/extension-guides/webview.html" class="sidebar-link">Webview API</a></li><li><a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="sidebar-link">虚拟文档</a></li><li><a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="sidebar-link">任务</a></li><li><a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="sidebar-link">源控制API</a></li><li><a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="sidebar-link">调试器插件</a></li><li><a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="sidebar-link">Markdown插件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/language-extensions/" class="sidebar-heading clickable router-link-active open"><span>◼️语言插件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/language-extensions/" class="sidebar-link">概述</a></li><li><a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="active sidebar-link">语法高亮</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html#textmate-语法" class="sidebar-link">TextMate 语法</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html#开发全新的语法插件" class="sidebar-link">开发全新的语法插件</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html#语法注入" class="sidebar-link">语法注入</a></li></ul></li><li><a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="sidebar-link">代码片段</a></li><li><a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="sidebar-link">语言配置</a></li><li><a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="sidebar-link">程序性语言特性</a></li><li><a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="sidebar-link">示例：语言服务器</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/advanced-topics/extension-host" class="sidebar-heading clickable"><span>◼️进阶主题</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="sidebar-link">插件主机</a></li><li><a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="sidebar-link">支持远程开发</a></li><li><a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="sidebar-link">使用不稳定的API</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/references/vscode-api" class="sidebar-heading clickable"><span>️️◼️参考</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/references/vscode-api.html" class="sidebar-link">VS Code API</a></li><li><a href="/vscode-ext-doccn/references/contribution-points.html" class="sidebar-link">发布内容配置</a></li><li><a href="/vscode-ext-doccn/references/activation-events.html" class="sidebar-link">激活事件</a></li><li><a href="/vscode-ext-doccn/references/extension-manifest.html" class="sidebar-link">插件清单</a></li><li><a href="/vscode-ext-doccn/references/commands.html" class="sidebar-link">内置命令</a></li><li><a href="/vscode-ext-doccn/references/theme-color.html" class="sidebar-link">主题色彩</a></li><li><a href="/vscode-ext-doccn/references/icons-in-labels.html" class="sidebar-link">标签中的图标</a></li><li><a href="/vscode-ext-doccn/references/document-selector.html" class="sidebar-link">文档选择器</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/overview" class="sidebar-heading clickable"><span>插件介绍（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world" class="sidebar-heading clickable"><span>从示例开始（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/developing-extensions" class="sidebar-heading clickable"><span>开发步骤（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/webview-api" class="sidebar-heading clickable"><span>进阶（第一版）</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="语法高亮"><a href="#语法高亮" class="header-anchor">#</a> 语法高亮</h1> <p>语法高亮决定源代码的颜色和样式，它主要负责关键字（如javascript中的<code>if</code>，<code>for</code>）、字符串、注释、变量名等等语法的着色工作。</p> <p>语法高亮由两部分工作组成：</p> <ul><li>根据语法将文本解析成符号和作用域</li> <li>然后根据这份作用域映射应用对应的颜色和样式</li></ul> <p>本文档只教你第一部分：根据语法将文本解析成符号和作用域，然后使用现成的颜色和样式。自定义样式的部分请参考<a href="/extension-guides/color-theme#%E8%AF%AD%E6%B3%95%E8%89%B2%E5%BD%A9">色彩主题指南</a></p> <h2 id="textmate-语法"><a href="#textmate-语法" class="header-anchor">#</a> TextMate 语法</h2> <hr> <p>VS Code使用<a href="https://macromates.com/manual/en/language_grammars" target="_blank" rel="noopener noreferrer">TextMate 语法<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>将文本分割成一个个符号。TextMate语法是<a href="https://macromates.com/manual/en/regular_expressions" target="_blank" rel="noopener noreferrer">Oniguruma正则表达式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>的集合，一般是一份plist或者JSON格式的文件。你可以在<a href="https://www.apeth.com/nonblog/stories/textmatebundle.html" target="_blank" rel="noopener noreferrer">这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>找到更棒的介绍文档，在里面可以找到你感兴趣的TextMate语法。</p> <h4 id="符号和作用域"><a href="#符号和作用域" class="header-anchor">#</a> 符号和作用域</h4> <p>符号是由一门编程语言中最常见的一到几个字符组成的。符号包括运算符（如：<code>+</code>和<code>*</code>），变量名（如：<code>myVar</code>），或者字符串（如：<code>&quot;my string&quot;</code>）。</p> <p>每个符号都有其作用域，作用域描述了这个符号的上下文。一个符号可被由<strong>点</strong>符号序列查找到，比如javascript中的<code>+</code>符号有这样的作用域<code>keyword.operator.arithmetic.js</code>。</p> <p>主题会把颜色和样式映射到作用域上，这样一来就实现了语法高亮。TextMate提供了一些主题中<a href="https://macromates.com/manual/en/language_grammars" target="_blank" rel="noopener noreferrer">常用的作用域<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，如果你想要尽可能全面地支持语法，最好从现成的主题中入手，避免重新编写主题。</p> <p>作用域支持嵌套，每个符号都会关联到它的父作用域上。下面的例子使用了<a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%A3%80%E6%9F%A5%E5%99%A8">作用域检查器</a>，可以清晰地看到javascript函数中的运算符<code>+</code>和它的作用域层级：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/scopes.png" alt="scopes"></p> <p>父作用域的信息也同样是主题中的一部分。当主题指定了作用域，该作用域下的所有符号都会进行对应的着色，除非主题里面对单个作用域有其特殊配置。</p> <h4 id="配置基本语法"><a href="#配置基本语法" class="header-anchor">#</a> 配置基本语法</h4> <p>VS Code支持JSON格式的TextMate语法。你可以在<a href="/references/contribution-points">发布内容配置</a>里面的<code>grammers</code>进行配置。</p> <p>这个配置点可以配置的内容有：语言的id，顶层语法作用域的名称，语法文件的路径。下面是一个<code>abc</code>语言的语法配置文件：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;languages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span>
+				<span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;abc&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;extensions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;.abc&quot;</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;grammars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span>
+				<span class="token property">&quot;language&quot;</span><span class="token operator">:</span> <span class="token string">&quot;abc&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;source.abc&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./syntaxes/abc.tmGrammar.json&quot;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>这个语法文件本身包含了一个顶层规则，里面一般分为两个部分，<code>patterns</code>列出了程序(program)和<code>repository</code>的顶层元素。语法中的其他规则需要从<code>repository</code>中使用<code>{ &quot;include&quot;: &quot;#id&quot; }</code>引入。</p> <p><code>abc</code>语法标记了字母<code>a</code>，<code>b</code>和<code>c</code>作为关键字，可以被括号包起来成为一个表达式。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;source.abc&quot;</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;patterns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#expression&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;expression&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;patterns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#letter&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#paren-expression&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;letter&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;match&quot;</span><span class="token operator">:</span> <span class="token string">&quot;a|b|c&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword.letter&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;paren-expression&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;begin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\\(&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;end&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\\)&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;beginCaptures&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+				<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;punctuation.paren.open&quot;</span> <span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;endCaptures&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+				<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;punctuation.paren.close&quot;</span> <span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;expression.group&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;patterns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#expression&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>语法引擎会试着逐步将<code>expression</code>中的规则应用到文本中。比如下面这个简单的程序：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>a
+(
+    b
+)
+x
+(
+    (
+        c
+        xyz
+    )
+)
+(
+a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>这个例子中的语法产生了下面的作用域列表（从左到右，从最佳匹配到最不匹配）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>a               keyword.letter, source.abc
+(               punctuation.paren.open, expression.group, source.abc
+    b           expression.group, source.abc
+)               punctuation.paren.close, expression.group, source.abc
+x               source.abc
+(               punctuation.paren.open, expression.group, source.abc
+    (           punctuation.paren.open, expression.group, expression.group, source.abc
+        c       keyword.letter, expression.group, expression.group, source.abc
+        xyz     expression.group, expression.group, source.abc
+    )           punctuation.paren.close, expression.group, expression.group, source.abc
+)               punctuation.paren.close, expression.group, source.abc
+(               source.abc
+a               keyword.letter, source.abc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>注意文本匹配不是单一规则，比如字符串<code>xyz</code>，是包含在当前作用域中的。文件的最后一个括号在<code>expression.group</code>里面，因为不会匹配<code>end</code>规则。</p> <h4 id="嵌入式语言"><a href="#嵌入式语言" class="header-anchor">#</a> 嵌入式语言</h4> <p>如果你的语法中需要在父语言中嵌入其他语言，比如HTML中的CSS，那么你可以使用<code>embeddedLanguages</code>配置，告诉VSCode怎么处理嵌入的语言。然后嵌入语言的括号匹配，注释，和其他基础语言功能都会正常运作。</p> <p><code>embeddedLanguages</code>配置将嵌入语言的作用域映射到顶层语言的作用域上。下面里的例子里，<code>meta.embedded.block.javascript</code>作用域中的任何符号都会以javscript处理：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;grammars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span>
+				<span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./syntaxes/abc.tmLanguage.json&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;source.abc&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;embeddedLanguages&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;meta.embedded.block.javascript&quot;</span><span class="token operator">:</span> <span class="token string">&quot;source.js&quot;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>现在，如你对应用了<code>meta.embedded.block.javascript</code>的符号进行注释就会有正确的<code>//</code>javascript风格，如果你触发代码片段，也会提示对应的javascript片段。</p> <h2 id="开发全新的语法插件"><a href="#开发全新的语法插件" class="header-anchor">#</a> 开发全新的语法插件</h2> <hr> <p>使用<a href="/get-started/your-first-extension">VS Code的Yeoman模板</a>快速创建一个新的语法插件，运行<code>yo code</code>然后选择<code>New Language</code>：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/yo-new-language.png" alt="yo-new-language"></p> <p>Yeoman通过问问题的方式最后生成新的插件，对于创建语法插件最重要的几点就是：</p> <ul><li><code>Language Id</code> - 这个语言的id</li> <li><code>Language Name</code> - 友好的名称</li> <li><code>Scope names</code> - TextMate根作用域名称</li></ul> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/yo-new-language-questions.png" alt="yo-new-language-questions"></p> <p>生成器会假设你要同时对新语言定义好语言id和语法。如果你只是根据已有的语言创建新的语法，那么你只要填好目标语言的信息就好，然后一定要删除生成的<code>package.json</code>中的<code>languages</code>部分。</p> <p>回答了一大堆问题之后，Yeoman会创建一个新的插件，其结构如下：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/generated-new-language-extension.png" alt="generated-new-language-extension"></p> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>如果你只是配置一个VS Code中已有语言的语法，记得删掉生成的<code>package.json</code>中的<code>languages</code>配置。</p></div> <h4 id="迁移现成的textmate语法"><a href="#迁移现成的textmate语法" class="header-anchor">#</a> 迁移现成的TextMate语法</h4> <p><code>yo code</code>也快成帮你把已有的TextMate语法转成一个VS Code插件。使用<code>yo code</code>，选择<code>Language extension</code>，当询问是否从已有TextMate文件插件的时候，填入后缀为<code>.tmLanguage</code>或<code>.json</code>的TextMate语法文件。</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/yo-convert.png" alt="yo-convert"></p> <h4 id="用yaml配置语法"><a href="#用yaml配置语法" class="header-anchor">#</a> 用YAML配置语法</h4> <p>随着语言日益复杂，你可能很快就会难以理解和维护你的json文件。如果你发现自己需要写很多正则表达式，或是需要添加大量解释语法层面的注释，你可能需要考虑使用yaml定义语法文件了。</p> <p>Yaml语法和json有着同样的结构，但是它的语法更加精简，如多行字符串和注释。</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/yaml-grammar.png" alt="yaml-grammar"></p> <p>VS Code只能加载json语法，所以yaml格式的语法文件必须最终转换成json文件。<a href="https://www.npmjs.com/package/js-yaml" target="_blank" rel="noopener noreferrer"><code>js-yaml</code>包<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>可以帮你完成这个任务：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># Install js-yaml as a development only dependency in your extension</span>
+$ <span class="token function">npm</span> <span class="token function">install</span> js-yaml --save-dev
+
+<span class="token comment"># Use the command line tool to convert the yaml grammar to json</span>
+$ npx js-yaml syntaxes/abc.tmLanguage.yaml <span class="token operator">&gt;</span> syntaxes/abc.tmLanguage.json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="作用域检查器"><a href="#作用域检查器" class="header-anchor">#</a> 作用域检查器</h4> <p>VS Code自带的作用域检查器能帮你调试语法文件。它能显示当前位置<em>符号</em>作用域，以及应用在上面的主题规则和元信息。</p> <p>在命令面板中输入<code>Developer: Inspect TM Scopes</code>或者<a href="https://code.visualstudio.com/docs/getstarted/keybindings" target="_blank" rel="noopener noreferrer">使用快捷键<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>启动<em>作用域检查器</em>。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cmd+alt+shift+i&quot;</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;command&quot;</span><span class="token operator">:</span> <span class="token string">&quot;editor.action.inspectTMScopes&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/language-extensions/images/syntax-highlighting/scope-inspector.png" alt="scope-inspector"></p> <p>作用域检查器可以显示以下的信息：</p> <ol><li>当前符号</li> <li>关于符号的元信息，这些值都是计算后的值。如果你使用了嵌入语言，那么这里最重要的信息就是<code>language</code>和<code>token type</code>了</li> <li>符号使用的主题规则。这里只显示当前应用的规则，而不显示被其他样式覆盖的规则。</li> <li>完整的作用域列表，越往上作用域越明确。</li></ol> <h2 id="语法注入"><a href="#语法注入" class="header-anchor">#</a> 语法注入</h2> <hr> <p>你可以通过<em>语法注入</em>扩展一个现成的语法文件。<em>语法注入</em>就是常规的TextMate语法，<em>语法注入</em>的应用有：</p> <ul><li>高亮注释中的关键字，如<code>TODO</code></li> <li>对现有语法添加更明确的作用域信息</li> <li>向Markdown中的代码区块添加语法高亮</li></ul> <h4 id="创建一个基础语法注入"><a href="#创建一个基础语法注入" class="header-anchor">#</a> 创建一个基础语法注入</h4> <p><em>语法注入</em>也是在<code>package.json</code>中配置的，不过这次不需要配置<code>language</code>，而是配置<code>injectTo</code>指明目需要注入的语言作用域列表。</p> <p>在这个例子里，我们会新建一个非常简单的注入语法，对javascript注释中的<code>TODO</code>进行高亮。我们在<code>injectTo</code>中用<code>source.js</code>指向目标语言的作用域。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;grammars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span>
+				<span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./syntaxes/injection.json&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;todo-comment.injection&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;injectTo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;source.js&quot;</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>除了顶层的<code>injectionSelector</code>，语法本身就应该是标准的TextMate语法。<code>injectionSelector</code>是一个作用域选择器，它指明了<em>语法注入</em>生效的作用域。在我们的例子里，我们想要在所有<code>//</code>注释中的<code>TODO</code>高亮。使用<a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%A3%80%E6%9F%A5%E5%99%A8">作用域检查器</a>，我们会发现JavaScript的双斜杠存在作用域<code>comment.line.double-slash</code>，所以我们的注入选择器是<code>L:comment.line.double-slash</code>：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;todo-comment.injection&quot;</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;injectionSelector&quot;</span><span class="token operator">:</span> <span class="token string">&quot;L:comment.line.double-slash&quot;</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;patterns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+		<span class="token punctuation">{</span>
+			<span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#todo-keyword&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;todo-keyword&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;match&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TODO&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword.todo&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>注入选择器中的<code>L:</code>代表注入的语法添加在现有语法规则的左边。也就是说我们注入的语法规则会在任何现有语法规则之前生效。</p> <h4 id="嵌入语法"><a href="#嵌入语法" class="header-anchor">#</a> 嵌入语法</h4> <p><em>语法注入</em>也可以用在嵌入语言中，在他们的父级语法中进行配置。就和普通的语法意义，<em>语法注入</em>也可以使用<code>embeddedLanguages</code>将嵌入语言的作用域映射到顶层的语言作用域上。</p> <p>比如高亮JS字符串中的sql查询的插件，可以使用<code>embeddedLanguages</code>为字符串中所有匹配<code>meta.embedded.inline.sql</code>的符号应用sql语言的基本功能，比如括号匹配和片段选择。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;grammars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span>
+				<span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./syntaxes/injection.json&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sql-string.injection&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;injectTo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;source.js&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;embeddedLanguages&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;meta.embedded.inline.sql&quot;</span><span class="token operator">:</span> <span class="token string">&quot;source.sql&quot;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h4 id="符号类型和嵌入语言"><a href="#符号类型和嵌入语言" class="header-anchor">#</a> 符号类型和嵌入语言</h4> <p>对于嵌入语言中的注入语言还会有个副作用，那就是VS Code把所有字符串（string）中的<em>符号</em>视为字符文本，而且把注释中的所有<em>符号</em>视为符号内容（token content）。
+因此诸如括号匹配和自动补全在字符串和注释中是无法使用的，如果<em>嵌入语言</em>刚好出现在字符串或注释中，那么这些功能就无法在<em>嵌入语言</em>中使用。</p> <p>想要重载这个行为，你需要使用<code>meta.embedded.*</code>作用域重置VS Code标记字符串和注释行为。最佳实践就是始终将嵌入语言放在<code>meta.embedded.*</code>作用域中，确保VS Code能够正确处理嵌入语言。</p> <p>如果你无法为你的语法添加<code>meta.embedded.*</code>作用域，你可以在语法配置中用<code>tokenTypes</code>，指定<em>作用域</em>到内容模式（content mode）上。
+下面的<code>tokenTypes</code>确保<code>my.sql.template.string</code>作用域中的任何内容都应视为代码：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;grammars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+			<span class="token punctuation">{</span>
+				<span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./syntaxes/injection.json&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;scopeName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sql-string.injection&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;injectTo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;source.js&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;embeddedLanguages&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;my.sql.template.string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;source.sql&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;tokenTypes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;my.sql.template.string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;other&quot;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Rackar/vscode-ext-doccn/edit/vuepress/docs/language-extensions/syntax-highlight-guide.md" target="_blank" rel="noopener noreferrer">参与编辑此文章</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">4/9/2020, 4:21:14 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vscode-ext-doccn/language-extensions/" class="prev router-link-active">
+        概述
+      </a></span> <span class="next"><a href="/vscode-ext-doccn/language-extensions/snippet-guide.html">
+        代码片段
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vscode-ext-doccn/assets/js/app.67b099dc.js" defer></script><script src="/vscode-ext-doccn/assets/js/2.0c3262fa.js" defer></script><script src="/vscode-ext-doccn/assets/js/60.dd304eb7.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Webview API | VS Code 插件开发中文文档</title>
+    <meta name="description" content="Just playing around">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/vscode-ext-doccn/favicon.ico">
+    
+    <link rel="preload" href="/vscode-ext-doccn/assets/css/0.styles.07dbe2c0.css" as="style"><link rel="preload" href="/vscode-ext-doccn/assets/js/app.67b099dc.js" as="script"><link rel="preload" href="/vscode-ext-doccn/assets/js/2.0c3262fa.js" as="script"><link rel="preload" href="/vscode-ext-doccn/assets/js/51.baf68db8.js" as="script"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/10.53d4dc08.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/11.131c3385.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/12.f0c2812b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/13.867ab591.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/14.7286eeb4.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/15.e62d376f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/16.eb3c41f4.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/17.5341797c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/18.010e9a2d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/19.058a630c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/20.8cf7eaad.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/21.335c5e90.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/22.c9f32eaa.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/23.41b77e0d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/24.e3108057.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/25.d5de2954.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/26.408021ba.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/27.e1161264.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/28.4e91e68a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/29.11223763.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/3.5682db39.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/30.173a131b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/31.6b6da818.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/32.bcc0da6f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/33.e5e6ed8e.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/34.d332d5ec.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/35.43317ea9.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/36.06b324a6.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/37.1371c1d2.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/38.546b9b78.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/39.d06c15ef.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/4.c611114a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/40.d660003c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/41.26fff1f5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/42.797b4334.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/43.764f9c94.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/44.dc01847d.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/45.6e419c07.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/46.c8875656.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/47.307b5b3c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/48.efc69982.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/49.a526f801.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/5.918cd74b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/50.0a9a36e1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/52.bf3fb58a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/53.97ab9ec5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/54.2718dae1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/55.c0ec01e6.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/56.5affa465.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/57.6d2804cd.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/58.3cccd148.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/59.e75aba4f.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/6.de55cb22.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/60.dd304eb7.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/61.991126b1.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/62.6d841ee7.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/63.5bd614b9.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/64.dbe8f1da.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/65.9ee5d142.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/66.e0064173.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/67.229306c3.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/68.ecc0e67c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/69.0003d65a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/7.ad8cd07b.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/70.3710317c.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/71.29e2aea5.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/72.cbf7131a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/73.a35e8890.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/74.2a2e1805.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/75.ef9d5302.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/76.b74f2677.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/77.72198b00.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/78.471bceab.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/79.62f27c5a.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/8.25b85287.js"><link rel="prefetch" href="/vscode-ext-doccn/assets/js/9.484942b7.js">
+    <link rel="stylesheet" href="/vscode-ext-doccn/assets/css/0.styles.07dbe2c0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vscode-ext-doccn/" class="home-link router-link-active"><!----> <span class="site-name">VS Code 插件开发中文文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 预备知识 " class="dropdown-title"><span class="title"> 预备知识 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/first-step.html" class="nav-link">
+  非JS开发者的第一步
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="nav-link">
+  Typescript-变量和类型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/class.html" class="nav-link">
+  Typescript-类
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="nav-link">
+  Typescript-接口和命名空间
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/generics.html" class="nav-link">
+  Typescript-泛型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="nav-link">
+  Typescript-声明文件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 第一步 " class="dropdown-title"><span class="title"> 第一步 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="nav-link">
+  你的第一个插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="nav-link">
+  解析插件结构
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="nav-link">
+  小结
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 开发插件 " class="dropdown-title"><span class="title"> 开发插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="nav-link">
+  测试插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="nav-link">
+  发布插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="nav-link">
+  打包插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="nav-link">
+  持续集成
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件功能 " class="dropdown-title"><span class="title"> 插件功能 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/readme.html" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="nav-link">
+  常用功能
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="nav-link">
+  主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="nav-link">
+  扩展工作台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件指南 " class="dropdown-title"><span class="title"> 插件指南 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/" class="nav-link router-link-active">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/command.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="nav-link">
+  色彩主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="nav-link">
+  图标主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="nav-link">
+  树视图
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/webview.html" class="nav-link router-link-exact-active router-link-active">
+  Webview
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="nav-link">
+  虚拟文档
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="nav-link">
+  任务
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="nav-link">
+  源控制
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="nav-link">
+  调试器插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="nav-link">
+  Markdown插件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 语言插件 " class="dropdown-title"><span class="title"> 语言插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="nav-link">
+  语法高亮
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="nav-link">
+  代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="nav-link">
+  语言配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="nav-link">
+  程序性语言特性
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="nav-link">
+  语言服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 进阶主题 " class="dropdown-title"><span class="title"> 进阶主题 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="nav-link">
+  插件主机
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="nav-link">
+  远程开发
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="nav-link">
+  使用不稳定的API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="参考 " class="dropdown-title"><span class="title">参考 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/vscode-api.html" class="nav-link">
+  VS Code API
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/contribution-points.html" class="nav-link">
+  发布内容配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/activation-events.html" class="nav-link">
+  激活事件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/extension-manifest.html" class="nav-link">
+  插件清单
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/commands.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/theme-color.html" class="nav-link">
+  主题色彩
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/icons -in -labels.html" class="nav-link">
+  标签中的图标
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/document-selector.html" class="nav-link">
+  文档选择器
+</a></li></ul></div></div> <a href="https://github.com/Rackar/vscode-ext-doccn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 预备知识 " class="dropdown-title"><span class="title"> 预备知识 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/first-step.html" class="nav-link">
+  非JS开发者的第一步
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="nav-link">
+  Typescript-变量和类型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/class.html" class="nav-link">
+  Typescript-类
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="nav-link">
+  Typescript-接口和命名空间
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/generics.html" class="nav-link">
+  Typescript-泛型
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="nav-link">
+  Typescript-声明文件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 第一步 " class="dropdown-title"><span class="title"> 第一步 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="nav-link">
+  你的第一个插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="nav-link">
+  解析插件结构
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="nav-link">
+  小结
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 开发插件 " class="dropdown-title"><span class="title"> 开发插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="nav-link">
+  测试插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="nav-link">
+  发布插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="nav-link">
+  打包插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="nav-link">
+  持续集成
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件功能 " class="dropdown-title"><span class="title"> 插件功能 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/readme.html" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="nav-link">
+  常用功能
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="nav-link">
+  主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="nav-link">
+  扩展工作台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 插件指南 " class="dropdown-title"><span class="title"> 插件指南 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/" class="nav-link router-link-active">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/command.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="nav-link">
+  色彩主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="nav-link">
+  图标主题
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="nav-link">
+  树视图
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/webview.html" class="nav-link router-link-exact-active router-link-active">
+  Webview
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="nav-link">
+  虚拟文档
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="nav-link">
+  任务
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="nav-link">
+  源控制
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="nav-link">
+  调试器插件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="nav-link">
+  Markdown插件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 语言插件 " class="dropdown-title"><span class="title"> 语言插件 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/" class="nav-link">
+  概述
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="nav-link">
+  语法高亮
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="nav-link">
+  代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="nav-link">
+  语言配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="nav-link">
+  程序性语言特性
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="nav-link">
+  语言服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label=" 进阶主题 " class="dropdown-title"><span class="title"> 进阶主题 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="nav-link">
+  插件主机
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="nav-link">
+  远程开发
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="nav-link">
+  使用不稳定的API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="参考 " class="dropdown-title"><span class="title">参考 </span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/vscode-api.html" class="nav-link">
+  VS Code API
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/contribution-points.html" class="nav-link">
+  发布内容配置
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/activation-events.html" class="nav-link">
+  激活事件
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/extension-manifest.html" class="nav-link">
+  插件清单
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/commands.html" class="nav-link">
+  命令
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/theme-color.html" class="nav-link">
+  主题色彩
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/icons -in -labels.html" class="nav-link">
+  标签中的图标
+</a></li><li class="dropdown-item"><!----> <a href="/vscode-ext-doccn/references/document-selector.html" class="nav-link">
+  文档选择器
+</a></li></ul></div></div> <a href="https://github.com/Rackar/vscode-ext-doccn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vscode-ext-doccn/" class="sidebar-link">◼️术语表和说明</a></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/preknowledge/first-step" class="sidebar-heading clickable"><span>◼️预备知识</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/preknowledge/first-step.html" class="sidebar-link">非JS开发者的第一步</a></li><li><a href="/vscode-ext-doccn/preknowledge/variable-and-type.html" class="sidebar-link">认识TypeScript-变量和类型</a></li><li><a href="/vscode-ext-doccn/preknowledge/class.html" class="sidebar-link">认识TypeScript-类</a></li><li><a href="/vscode-ext-doccn/preknowledge/interface-and-namespace.html" class="sidebar-link">认识TypeScript-类型接口和命名空间</a></li><li><a href="/vscode-ext-doccn/preknowledge/generics.html" class="sidebar-link">认识 Typescript-泛型</a></li><li><a href="/vscode-ext-doccn/preknowledge/declaration-files.html" class="sidebar-link">声明文件</a></li></ul></section></li><li><a href="/vscode-ext-doccn/api/" class="sidebar-link">◼️概述</a></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/get-started/your-first-extension" class="sidebar-heading clickable"><span>◼️第一步</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/get-started/your-first-extension.html" class="sidebar-link">你的第一个插件</a></li><li><a href="/vscode-ext-doccn/get-started/extension-anatomy.html" class="sidebar-link">解析插件结构</a></li><li><a href="/vscode-ext-doccn/get-started/wrapping-up.html" class="sidebar-link">小结</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/working-with-extensions/testing-extension" class="sidebar-heading clickable"><span>◼️开发插件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/working-with-extensions/testing-extension.html" class="sidebar-link">测试插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/publish-extension.html" class="sidebar-link">发布插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/bundling-extension.html" class="sidebar-link">打包插件</a></li><li><a href="/vscode-ext-doccn/working-with-extensions/continuous-integration.html" class="sidebar-link">持续集成</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/extension-capabilities/" class="sidebar-heading clickable"><span>◼️插件功能</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-capabilities/" class="sidebar-link">插件功能</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/common-capabilities.html" class="sidebar-link">常用功能</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/theming.html" class="sidebar-link">主题</a></li><li><a href="/vscode-ext-doccn/extension-capabilities/extending-workbench.html" class="sidebar-link">扩展工作台</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/extension-guides/" class="sidebar-heading clickable router-link-active open"><span>◼️插件指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/extension-guides/" class="sidebar-link">插件指南</a></li><li><a href="/vscode-ext-doccn/extension-guides/command.html" class="sidebar-link">命令</a></li><li><a href="/vscode-ext-doccn/extension-guides/color-theme.html" class="sidebar-link">色彩主题</a></li><li><a href="/vscode-ext-doccn/extension-guides/icon-theme.html" class="sidebar-link">图标主题</a></li><li><a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="sidebar-link">树视图</a></li><li><a href="/vscode-ext-doccn/extension-guides/webview.html" class="active sidebar-link">Webview API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#相关链接" class="sidebar-link">相关链接</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#我应该用webview吗？" class="sidebar-link">我应该用webview吗？</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#webviews-api-基础" class="sidebar-link">Webviews API 基础</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#加载本地内容" class="sidebar-link">加载本地内容</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#脚本和信息传递" class="sidebar-link">脚本和信息传递</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#安全性" class="sidebar-link">安全性</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#持久性" class="sidebar-link">持久性</a></li><li class="sidebar-sub-header"><a href="/vscode-ext-doccn/extension-guides/webview.html#下一步" class="sidebar-link">下一步</a></li></ul></li><li><a href="/vscode-ext-doccn/extension-guides/virtual-documents.html" class="sidebar-link">虚拟文档</a></li><li><a href="/vscode-ext-doccn/extension-guides/task-provider.html" class="sidebar-link">任务</a></li><li><a href="/vscode-ext-doccn/extension-guides/scm-provider.html" class="sidebar-link">源控制API</a></li><li><a href="/vscode-ext-doccn/extension-guides/debugger-extension.html" class="sidebar-link">调试器插件</a></li><li><a href="/vscode-ext-doccn/extension-guides/markdown-extension.html" class="sidebar-link">Markdown插件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/language-extensions/" class="sidebar-heading clickable"><span>◼️语言插件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/language-extensions/" class="sidebar-link">概述</a></li><li><a href="/vscode-ext-doccn/language-extensions/syntax-highlight-guide.html" class="sidebar-link">语法高亮</a></li><li><a href="/vscode-ext-doccn/language-extensions/snippet-guide.html" class="sidebar-link">代码片段</a></li><li><a href="/vscode-ext-doccn/language-extensions/language-configuration-guide.html" class="sidebar-link">语言配置</a></li><li><a href="/vscode-ext-doccn/language-extensions/programmatic-language-features.html" class="sidebar-link">程序性语言特性</a></li><li><a href="/vscode-ext-doccn/language-extensions/language-server-extension-guide.html" class="sidebar-link">示例：语言服务器</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/advanced-topics/extension-host" class="sidebar-heading clickable"><span>◼️进阶主题</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/advanced-topics/extension-host.html" class="sidebar-link">插件主机</a></li><li><a href="/vscode-ext-doccn/advanced-topics/remote-extensions.html" class="sidebar-link">支持远程开发</a></li><li><a href="/vscode-ext-doccn/advanced-topics/using-proposed-api.html" class="sidebar-link">使用不稳定的API</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/vscode-ext-doccn/references/vscode-api" class="sidebar-heading clickable"><span>️️◼️参考</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/vscode-ext-doccn/references/vscode-api.html" class="sidebar-link">VS Code API</a></li><li><a href="/vscode-ext-doccn/references/contribution-points.html" class="sidebar-link">发布内容配置</a></li><li><a href="/vscode-ext-doccn/references/activation-events.html" class="sidebar-link">激活事件</a></li><li><a href="/vscode-ext-doccn/references/extension-manifest.html" class="sidebar-link">插件清单</a></li><li><a href="/vscode-ext-doccn/references/commands.html" class="sidebar-link">内置命令</a></li><li><a href="/vscode-ext-doccn/references/theme-color.html" class="sidebar-link">主题色彩</a></li><li><a href="/vscode-ext-doccn/references/icons-in-labels.html" class="sidebar-link">标签中的图标</a></li><li><a href="/vscode-ext-doccn/references/document-selector.html" class="sidebar-link">文档选择器</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/overview" class="sidebar-heading clickable"><span>插件介绍（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/example-hello-world" class="sidebar-heading clickable"><span>从示例开始（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/developing-extensions" class="sidebar-heading clickable"><span>开发步骤（第一版）</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vscode-ext-doccn/extension-authoring/webview-api" class="sidebar-heading clickable"><span>进阶（第一版）</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="webview-api"><a href="#webview-api" class="header-anchor">#</a> Webview API</h1> <p>webview API为开发者提供了完全自定义视图的能力，例如内置的Markdown插件使用了webview渲染Markdown预览文件。Webview也能用于构建比VS Code原生API支持构建的更加复杂的用户交互界面。</p> <p>可以把webview看成是VS Code中的<code>iframe</code>，它可以渲染几乎全部的HTML内容，它通过消息机制和插件通信。这样的自由度令我们的webview非常强劲并将插件的潜力提升到了新的高度。</p> <h2 id="相关链接"><a href="#相关链接" class="header-anchor">#</a> 相关链接</h2> <hr> <ul><li><a href="https://github.com/Microsoft/vscode-extension-samples/blob/master/webview-sample/README.md" target="_blank" rel="noopener noreferrer">Webview 示例<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h3 id="使用的vs-code-api"><a href="#使用的vs-code-api" class="header-anchor">#</a> 使用的VS Code API</h3> <ul><li><a href="https://code.visualstudio.com/api/references/vscode-api#window.createWebviewPanel" target="_blank" rel="noopener noreferrer">window.createWebviewPanel<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://code.visualstudio.com/api/references/vscode-api#window.registerWebviewPanelSerializer" target="_blank" rel="noopener noreferrer">window.registerWebviewPanelSerializer<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h2 id="我应该用webview吗？"><a href="#我应该用webview吗？" class="header-anchor">#</a> 我应该用webview吗？</h2> <hr> <p>webview虽然很赞，但是我们应该节制地使用这个功能——比如当VS Code原生API不够用时。Webview重度依赖资源，所以它脱离插件的进程而单独运行在其他环境中。在VS Code中使用设计不良的webview会让用户抓狂。</p> <p>在使用webview之前，请作以下考虑：</p> <ul><li>这个功能真的需要VS Code来提供吗？分离成一个应用或者网站会不会更好？</li> <li>webview是实现这个特性的最后方案吗？VS Code原生API是否能达到同样的目的呢？</li> <li>你的webview所牺牲的高资源占用是否能换得同样的用户价值？</li></ul> <p>请记住：不要因为能使用webview而滥用webview。相反，如果你有充足的理由和自信，那么本篇教程对你来说会非常有用，现在就让我们开始吧。</p> <h2 id="webviews-api-基础"><a href="#webviews-api-基础" class="header-anchor">#</a> Webviews API 基础</h2> <hr> <p>为了解释webviewAPI，我们先构建一个简单的<strong>Cat Coding</strong>插件。这个插件会用一个webview显示猫写代码的gif。随着我们不断了解API，我们会不断地给插件添加功能，包括我们的猫写了多少行代码的计数跟踪器，如果猫猫写出了bug还会有一个提示弹出框。</p> <p>这是<strong>Cat Coding</strong>插件的第一版<code>package.json</code>，你可以在<a href="https://github.com/Microsoft/vscode-extension-samples/blob/master/webview-sample/README.md" target="_blank" rel="noopener noreferrer">这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>找到完整的代码。我们的第一版插件<a href="/extensibility-reference/contribution-points#contributescommands">提供了一个命令</a>，叫做<code>catCoding.start</code>。当用户从<strong>命令面板</strong>调用<em>Cat Coding: Start new cat coding session</em>，或者一个创建好的<em>键绑定</em>命令，我们的猫猫会出现在webview窗口内。</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cat-coding&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Cat Coding&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.0.1&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;publisher&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bierner&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;engines&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;vscode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.23.0&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;activationEvents&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;onCommand:catCoding.start&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./out/src/extension&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;contributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;commands&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;command&quot;</span><span class="token operator">:</span> <span class="token string">&quot;catCoding.start&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Start new cat coding session&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;category&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Cat Coding&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;vscode:prepublish&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tsc -p ./&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;compile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tsc -watch -p ./&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;postinstall&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node ./node_modules/vscode/bin/install&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;vscode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;@types/node&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^9.4.6&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;typescript&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.8.3&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><p>现在让我们实现<code>catCoding.start</code>命令，在我们的主文件中，像下面这样注册一个基础的webview：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 创建并显示新的webview</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span> <span class="token comment">// 只供内部使用，这个webview的标识</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span> <span class="token comment">// 给用户显示的面板标题</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span> <span class="token comment">// 给新的webview面板一个编辑器视图</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// Webview选项。我们稍后会用上</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><code>vscode.window.createWebviewPanel</code>函数创建并在编辑区展示了一个webview，下图显示了如果你试着运行<code>catCoding.start</code>命令会显示的东西：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-no_content.png" alt="一个空的webview"></p> <p>我们的命令以正确的标题打开了一个新的webview面板，但是没有任何内容！要想把我们的猫加到这个面板里面，我们需要<code>webview.html</code>设置HTML内容。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 创建和显示webview</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 设置HTML内容</span>
+      panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Cat Coding&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;img src=&quot;https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif&quot; width=&quot;300&quot; /&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><p>如果你再次运行命令，应该能看到下图：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-html.png" alt="含有html内容的webview"></p> <p>大功告成！</p> <p><code>webview.html</code>应该是一个完整的HTML文档。使用HTML片段或者格式错乱的HTML会造成异常。</p> <h3 id="更新webview内容"><a href="#更新webview内容" class="header-anchor">#</a> 更新webview内容</h3> <p><code>webview.html</code>也能在webview创建后更新内容，让我们用猫猫轮播图使<strong>Cat Coding</strong>具有动态性：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> cats <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'Coding Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif'</span><span class="token punctuation">,</span>
+  <span class="token string">'Compiling Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">let</span> iteration <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token function-variable function">updateWebview</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> cat <span class="token operator">=</span> iteration<span class="token operator">++</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token string">'Compiling Cat'</span> <span class="token operator">:</span> <span class="token string">'Coding Cat'</span><span class="token punctuation">;</span>
+        panel<span class="token punctuation">.</span>title <span class="token operator">=</span> cat<span class="token punctuation">;</span>
+        panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>cat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 设置初始化内容</span>
+      <span class="token function">updateWebview</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 每秒更新内容</span>
+      <span class="token function">setInterval</span><span class="token punctuation">(</span>updateWebview<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token parameter">cat<span class="token operator">:</span> <span class="token keyword">keyof</span> <span class="token keyword">typeof</span> cats</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Cat Coding&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;img src=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>cats<span class="token punctuation">[</span>cat<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; width=&quot;300&quot; /&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-update.gif" alt="更新webview内容"></p> <p>因为<code>webview.html</code>方法替换了整个webview内容，页面看起来像重新加载了一个iframe。记住：如果你在webview中使用了脚本，那就意味着<code>webview.html</code>的重置会使脚本状态重置。</p> <p>上述示例也使用了<code>webview.title</code>改变编辑器中的展示的文件名称，设置标题不会使webview重载。</p> <h3 id="生命周期"><a href="#生命周期" class="header-anchor">#</a> 生命周期</h3> <p>webview从属于创建他们的插件，插件必须保持住从webview返回的<code>createWebviewPanel</code>。如果你的插件失去了这个关联，它就不能再访问webview了，不过即使这样，webview还会继续展示在VS Code中。</p> <p>因为webview是一个文本编辑器视图，所以用户可以随时关闭webview。当用户关闭了webview面板后，webview就被销毁了。在我们的例子中，销毁webview时抛出了一个异常，说明我们上面的示例中使用的<code>seInterval</code>实际上产生了非常严重的Bug：如果用户关闭了面板，<code>setInterval</code>会继续触发，而且还会尝试更新<code>panel.webview.html</code>，这当然会抛出异常。喵星人可不喜欢异常，我们现在就来解决这个问题吧。</p> <p><code>onDidDispose</code>事件在webview被销毁时触发，我们在这个事件结束之后更新并释放webview资源。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> cats <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'Coding Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif'</span><span class="token punctuation">,</span>
+  <span class="token string">'Compiling Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">let</span> iteration <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token function-variable function">updateWebview</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> cat <span class="token operator">=</span> iteration<span class="token operator">++</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token string">'Compiling Cat'</span> <span class="token operator">:</span> <span class="token string">'Coding Cat'</span><span class="token punctuation">;</span>
+        panel<span class="token punctuation">.</span>title <span class="token operator">=</span> cat<span class="token punctuation">;</span>
+        panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>cat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token function">updateWebview</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> interval <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span>updateWebview<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      panel<span class="token punctuation">.</span><span class="token function">onDidDispose</span><span class="token punctuation">(</span>
+        <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 当面板关闭时，取消webview内容之后的更新</span>
+          <span class="token function">clearInterval</span><span class="token punctuation">(</span>interval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+        context<span class="token punctuation">.</span>subscriptions
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p>插件也可以通过编程方式关闭webview视图——调用它们的<code>dispose()</code>方法。我们假设，现在限制我们的猫猫每天工作5秒钟：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>cats<span class="token punctuation">[</span><span class="token string">'Coding Cat'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 5秒后，程序性地关闭webview面板</span>
+      <span class="token keyword">const</span> timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> panel<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      panel<span class="token punctuation">.</span><span class="token function">onDidDispose</span><span class="token punctuation">(</span>
+        <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 在第五秒结束之前处理用户手动的关闭动作</span>
+          <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+        context<span class="token punctuation">.</span>subscriptions
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="移动和可见性"><a href="#移动和可见性" class="header-anchor">#</a> 移动和可见性</h3> <p>当webview面板被移动到了非激活标签上，它就隐藏起来了。但这时并不是销毁，当重新激活标签后，VS Code会从<code>webview.html</code>自动恢复webview的内容。</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-restore.gif" alt="webview自动恢复内容"></p> <p><code>.visible</code>属性告诉你当前webview面板是否是可见的。</p> <p>插件也可以通过调用<code>reveal()</code>方法，程序性地将webview面板激活。这个方法可以接受一个用于放置面板的目标视图布局。一个面板一次只能显示在一个编辑布局中。调用<code>reveal()</code>或者拖动webview面板到新的编辑布局中去。</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-drag.gif" alt="在标签页中移动webview视图"></p> <p>现在更新我们的插件，一次只允许存在一个webview视图。如果面板处于非激活状态，那<code>catCoding.start</code>命令就把这个面板激活。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 追踪当前webview面板</span>
+  <span class="token keyword">let</span> currentPanel<span class="token operator">:</span> vscode<span class="token punctuation">.</span>WebviewPanel <span class="token operator">|</span> <span class="token keyword">undefined</span> <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> columnToShowIn <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span>activeTextEditor
+        <span class="token operator">?</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span>activeTextEditor<span class="token punctuation">.</span>viewColumn
+        <span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>currentPanel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 如果我们已经有了一个面板，那就把它显示到目标列布局中</span>
+        currentPanel<span class="token punctuation">.</span><span class="token function">reveal</span><span class="token punctuation">(</span>columnToShowIn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 不然，创建一个新面板</span>
+        currentPanel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+          <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+          <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+          columnToShowIn<span class="token punctuation">,</span>
+          <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        currentPanel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>cats<span class="token punctuation">[</span><span class="token string">'Coding Cat'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 当前面板被关闭后重置</span>
+        currentPanel<span class="token punctuation">.</span><span class="token function">onDidDispose</span><span class="token punctuation">(</span>
+          <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            currentPanel <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token keyword">null</span><span class="token punctuation">,</span>
+          context<span class="token punctuation">.</span>subscriptions
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><p>下面是一个新插件的行为：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-single_panel.gif" alt="在单个面板中展示"></p> <p>不论何时，如果webview的可见性改变了，或者当webview移动到了新的视图布局中，就会触发<code>onDidChangeViewState</code>。我们的插件可以利用这个时间改变布局中的webview显示的猫：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">const</span> cats <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">'Coding Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif'</span><span class="token punctuation">,</span>
+  <span class="token string">'Compiling Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif'</span><span class="token punctuation">,</span>
+  <span class="token string">'Testing Cat'</span><span class="token operator">:</span> <span class="token string">'https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>cats<span class="token punctuation">[</span><span class="token string">'Coding Cat'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 根据视图状态变动更新内容</span>
+      panel<span class="token punctuation">.</span><span class="token function">onDidChangeViewState</span><span class="token punctuation">(</span>
+        <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> panel <span class="token operator">=</span> e<span class="token punctuation">.</span>webviewPanel<span class="token punctuation">;</span>
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span>panel<span class="token punctuation">.</span>viewColumn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token operator">:</span>
+              <span class="token function">updateWebviewForCat</span><span class="token punctuation">(</span>panel<span class="token punctuation">,</span> <span class="token string">'Coding Cat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">case</span> vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>Two<span class="token operator">:</span>
+              <span class="token function">updateWebviewForCat</span><span class="token punctuation">(</span>panel<span class="token punctuation">,</span> <span class="token string">'Compiling Cat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">case</span> vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>Three<span class="token operator">:</span>
+              <span class="token function">updateWebviewForCat</span><span class="token punctuation">(</span>panel<span class="token punctuation">,</span> <span class="token string">'Testing Cat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">null</span><span class="token punctuation">,</span>
+        context<span class="token punctuation">.</span>subscriptions
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">updateWebviewForCat</span><span class="token punctuation">(</span><span class="token parameter">panel<span class="token operator">:</span> vscode<span class="token punctuation">.</span>WebviewPanel<span class="token punctuation">,</span> catName<span class="token operator">:</span> <span class="token keyword">keyof</span> <span class="token keyword">typeof</span> cats</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  panel<span class="token punctuation">.</span>title <span class="token operator">=</span> catName<span class="token punctuation">;</span>
+  panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>cats<span class="token punctuation">[</span>catName<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-ondidchangeviewstate.gif" alt="响应onDidChangeViewState事件"></p> <h3 id="检查和调试webviews"><a href="#检查和调试webviews" class="header-anchor">#</a> 检查和调试webviews</h3> <p>在命令面板中输入<strong>Developer: Toggle Developer Tools</strong>能帮助你调试webview。运行命令之后会为当前可见的webview加载一个devtool：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/basics-developer_tools.png" alt="Webview开发者工具"></p> <p>webview的内容是在webview文档中的一个iframe中的，用开发者工具检查和修改webview的DOM，在webview内调试脚本。</p> <p>如果你用了webview开发者工具的console，确保你在Console面板左上角的下拉框里选中了当前<strong>激活窗体</strong>环境：</p> <p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/debug-active-frame.png" alt="选择激活窗体"></p> <p><strong>激活窗体</strong>环境是webview脚本执行的地方。</p> <p>另外，<strong>Developer: Reload Webview</strong>命令会刷新所有已激活的webview。如果你需要重置一个webview的状态，这个命令会非常有用，或者你想要读取硬盘内容的webview更新一下，也可以使用这个方法。</p> <h2 id="加载本地内容"><a href="#加载本地内容" class="header-anchor">#</a> 加载本地内容</h2> <hr> <p>webview运行在独立的环境中，因此不能直接访问本地资源，这是出于安全性考虑的做法。这也意味着要想从你的插件中加载图片、样式等其他资源，或是从用户当前的工作区加载任何内容的话，你必须使用webview中的<code>vscode-resource:</code>协议。</p> <p><code>vscode-resource:</code>协议就像<code>file:</code>协议一样，不过它只允许访问本地文件。和<code>file:</code>一样的是，<code>vscode-resource:</code>只能从绝对路径中加载资源。</p> <p>想想一下，我们想要从本地把喵喵们的gif打包进来，而不是从Giphy（国外出名的gif收集站）里加载进来。要想做到这点，我们首先给本地文件新建一个URI，然后用<code>vscode-resource:</code>协议更新这些URI：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 获取磁盘上的资源路径</span>
+      <span class="token keyword">const</span> onDiskPath <span class="token operator">=</span> vscode<span class="token punctuation">.</span>Uri<span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span>
+        path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span>extensionPath<span class="token punctuation">,</span> <span class="token string">'media'</span><span class="token punctuation">,</span> <span class="token string">'cat.gif'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 获取在webview中使用的特殊URI</span>
+      <span class="token keyword">const</span> catGifSrc <span class="token operator">=</span> onDiskPath<span class="token punctuation">.</span><span class="token keyword">with</span><span class="token punctuation">(</span><span class="token punctuation">{</span> scheme<span class="token operator">:</span> <span class="token string">'vscode-resource'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>catGifSrc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p><code>catGifSrc</code>的值最后会像这样：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>vscode-resource:/Users/toonces/projects/vscode-cat-coding/media/cat.gif
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>默认情况下，<code>scode-resource:</code>只能访问下列地址的资源：</p> <ul><li>你的插件安装的目录</li> <li>用户当前激活的工作区</li></ul> <p>你也可以用data URI将资源直接嵌套到webview中去。</p> <h3 id="控制本地资源访问"><a href="#控制本地资源访问" class="header-anchor">#</a> 控制本地资源访问</h3> <p>使用<code>localResourceRoots</code>选项，webview可以控制<code>vscode-resource:</code>加载的的资源。
+<code>localResourceRoots</code>定义了可能被加载的本地内容的根URI。</p> <p>我们用<code>localResourceRoots</code>去约束<strong>Cat Coding</strong>webview只加载我们插件的<code>media</code>目录下的内容：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">// 只允许webview加载我们插件的`media`目录下的资源</span>
+          localResourceRoots<span class="token operator">:</span> <span class="token punctuation">[</span>vscode<span class="token punctuation">.</span>Uri<span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span>extensionPath<span class="token punctuation">,</span> <span class="token string">'media'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">const</span> onDiskPath <span class="token operator">=</span> vscode<span class="token punctuation">.</span>Uri<span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span>
+        path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span>extensionPath<span class="token punctuation">,</span> <span class="token string">'media'</span><span class="token punctuation">,</span> <span class="token string">'cat.gif'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> catGifSrc <span class="token operator">=</span> onDiskPath<span class="token punctuation">.</span><span class="token keyword">with</span><span class="token punctuation">(</span><span class="token punctuation">{</span> scheme<span class="token operator">:</span> <span class="token string">'vscode-resource'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span>catGifSrc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>为了禁止所有的本地资源，只要把<code>localResourceRoots</code>设为<code>[]</code>就好了。</p> <p>通常来说，webview应该和加载本地资源一样严格，然而，<code>vscode-resource</code>和<code>localResourceRoots</code>并不保证百分百的安全性。请确保你的webview遵循<a href="/extension-guides/webview#%E5%AE%89%E5%85%A8%E6%80%A7">安全性最佳实践</a>，强烈建议考虑添加一个<a href="/extension-guides/webview#%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5">内容安全政策</a>以便约束之后加载的内容。</p> <h3 id="给webview内容加上主题"><a href="#给webview内容加上主题" class="header-anchor">#</a> 给webview内容加上主题</h3> <p>webview可以基于当前的VS Code主题和CSS改变自身的样式。VS Code将主题分成3中类别，而且在<code>body</code>元素上加上了特殊类名以表明当前主题：</p> <ul><li><code>vscode-light</code>——亮色主题</li> <li><code>vscode-dark</code>——暗色主题</li> <li><code>vscode-high-contrast</code>——高反差主题</li></ul> <p>下列CSS改变了基于用户当前主题的webview字体颜色：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">body.vscode-light</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">body.vscode-dark</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">body.vscode-high-contrast</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>当开发一个webview应用的时候，请保证应用能在三种主题下都可以运作，务必在高反差模式下测试你的webview，以便有视觉障碍的用户也能正常使用。</p> <p>webview可以通过<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank" rel="noopener noreferrer">CSS variables<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>访问VS Code主题，这些变量以<code>vscode</code>为前缀，并且用<code>-</code>替代了<code>.</code>，例如<code>editor.foreground</code>变成了<code>var(--vscode-editor-foreground)</code>：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">code</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--vscode-editor-foreground<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>更多可用的主题变量，参阅<a href="/references/theme-color">主题色彩</a>。</p> <p>下面也定义了一些与字体有关的变量：</p> <ul><li><code>-vscode-editor-font-family</code> - 编辑器的文字类型(设置中的<code>editor.fontFamily</code>配置项)</li> <li><code>-vscode-editor-font-weight</code> - 编辑器的文字粗细(设置中的<code>editor.fontWeight</code>配置项)</li> <li><code>-vscode-editor-font-size</code> - 编辑器文字大小(设置中的<code>editor.fontSize</code>配置项)</li></ul> <h2 id="脚本和信息传递"><a href="#脚本和信息传递" class="header-anchor">#</a> 脚本和信息传递</h2> <hr> <p>既然webview就像iframe一样，也就是说它们也可以运行脚本，webview中的Javascript默认是禁用的，不过我们能用<code>enableScripts: true</code>打开它。</p> <p>让我们写一段脚本，追踪我们家喵星人写代码的行数。运行一个基础脚本非常的容易，但是注意这个示例只作演示用途，在实践中，你的webview应该遵循<a href="#%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5">内容安全政策</a>，禁止行内脚本。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span><span class="token string">'catCoding'</span><span class="token punctuation">,</span> <span class="token string">&quot;Cat Coding&quot;</span><span class="token punctuation">,</span> vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 在webview中启用脚本</span>
+            enableScripts<span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;title&gt;Cat Coding&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;img src=&quot;https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif&quot; width=&quot;300&quot; /&gt;
+                &lt;h1 id=&quot;lines-of-code-counter&quot;&gt;0&lt;/h1&gt;
+
+                &lt;script&gt;
+                    const counter = document.getElementById('lines-of-code-counter');
+
+                    let count = 0;
+                    setInterval(() =&gt; {
+                        counter.textContent = count++;
+                    }, 100);
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/scripts-basic.gif" alt="在webview中运行脚本"></p> <p>哇！真是位高产的喵主子!</p> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>webveiw的脚本能做到任何普通网页脚本能做到的事情，但是webview运行在自己的上下文中，脚本不能访问VS Code API。</p></div> <h3 id="将插件的信息传递到webview"><a href="#将插件的信息传递到webview" class="header-anchor">#</a> 将插件的信息传递到webview</h3> <p>插件可以用<code>webview.postMessage()</code>将数据发送到它的webview中。这个方法能发送任何序列化的JSON数据到webview中，在webview中则通过<code>message</code>事件接受信息。</p> <p>我们现在就来看看这个实现，在Cat Coding中新增一个命令来表示我们家的喵在重构他的代码（所以会减少代码总行数）。新增<code>catCoding.doRefactor</code>命令，利用<code>postMessage</code>把指示发送到webview中，webview中的<code>window.addEventListener('message' event =&gt; { ... })</code>则会处理这些信息：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// 现在只有一只喵喵程序员了</span>
+    <span class="token keyword">let</span> currentPanel<span class="token operator">:</span> vscode<span class="token punctuation">.</span>WebviewPanel <span class="token operator">|</span> <span class="token keyword">undefined</span> <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+
+    context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentPanel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            currentPanel<span class="token punctuation">.</span><span class="token function">reveal</span><span class="token punctuation">(</span>vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            currentPanel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span><span class="token string">'catCoding'</span><span class="token punctuation">,</span> <span class="token string">&quot;Cat Coding&quot;</span><span class="token punctuation">,</span> vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                enableScripts<span class="token operator">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            currentPanel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            currentPanel<span class="token punctuation">.</span><span class="token function">onDidDispose</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> currentPanel <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 我们新的命令</span>
+    context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.doRefactor'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentPanel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// 把信息发送到webview</span>
+        <span class="token comment">// 你可以发送任何序列化的JSON数据</span>
+        currentPanel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> command<span class="token operator">:</span> <span class="token string">'refactor'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;title&gt;Cat Coding&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;img src=&quot;https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif&quot; width=&quot;300&quot; /&gt;
+                &lt;h1 id=&quot;lines-of-code-counter&quot;&gt;0&lt;/h1&gt;
+
+                &lt;script&gt;
+                    const counter = document.getElementById('lines-of-code-counter');
+
+                    let count = 0;
+                    setInterval(() =&gt; {
+                        counter.textContent = count++;
+                    }, 100);
+
+                    // Handle the message inside the webview
+                    window.addEventListener('message', event =&gt; {
+
+                        const message = event.data; // The JSON data our extension sent
+
+                        switch (message.command) {
+                            case 'refactor':
+                                count = Math.ceil(count * 0.5);
+                                counter.textContent = count;
+                                break;
+                        }
+                    });
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/scripts-extension_to_webview.gif" alt="向webview传递信息"></p> <h3 id="将webview的信息传递到插件中"><a href="#将webview的信息传递到插件中" class="header-anchor">#</a> 将webview的信息传递到插件中</h3> <p>webview也可以把信息传递回对应的插件中，用VS Code API 为webview提供的<code>postMessage</code>函数我们就可以完成这个目标。调用webview中的<code>acquireVsCodeApi</code>获取VS Code API对象。这个函数在一个会话中只能调用一次，你必须保持住这个方法返回的VS Code API实例，然后再转交到需要调用这个实例的地方。</p> <p>现在我们在<strong>Cat Coding</strong>添加一个弹出bug的警示框：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span><span class="token string">'catCoding'</span><span class="token punctuation">,</span> <span class="token string">&quot;Cat Coding&quot;</span><span class="token punctuation">,</span> vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            enableScripts<span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 处理webview中的信息</span>
+        panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span><span class="token function">onDidReceiveMessage</span><span class="token punctuation">(</span><span class="token parameter">message</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">switch</span> <span class="token punctuation">(</span>message<span class="token punctuation">.</span>command<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">case</span> <span class="token string">'alert'</span><span class="token operator">:</span>
+                    vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">showErrorMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;title&gt;Cat Coding&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;img src=&quot;https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif&quot; width=&quot;300&quot; /&gt;
+                &lt;h1 id=&quot;lines-of-code-counter&quot;&gt;0&lt;/h1&gt;
+
+                &lt;script&gt;
+                    (function() {
+                        const vscode = acquireVsCodeApi();
+                        const counter = document.getElementById('lines-of-code-counter');
+
+                        let count = 0;
+                        setInterval(() =&gt; {
+                            counter.textContent = count++;
+
+                            // Alert the extension when our cat introduces a bug
+                            if (Math.random() &lt; 0.001 * count) {
+                                vscode.postMessage({
+                                    command: 'alert',
+                                    text: '🐛  on line ' + count
+                                })
+                            }
+                        }, 100);
+                    }())
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/scripts-webview_to_extension.gif" alt="从webview向插件传递信息"></p> <p>出于安全性考虑，你必须保证VS Code API的私有性，也不会泄露到全局状态中去。</p> <h2 id="安全性"><a href="#安全性" class="header-anchor">#</a> 安全性</h2> <hr> <p>每一个你创建的webview都必须遵循这些基础的安全性最佳实践。</p> <h3 id="限制能力"><a href="#限制能力" class="header-anchor">#</a> 限制能力</h3> <p>webview应该留有它所需的最小功能集合即可。例如：如果你的webview不需要运行脚本，就不要设置<code>enableScripts: true</code>。如果你的webview不需要加载用户工作区的资源，就把<code>localResourceRoots</code>设置为<code>[vscode.Uri.file(extensionContext.extensionPath)]</code>或者<code>[]</code>以便禁止访问任何本地资源。</p> <h3 id="内容安全策略"><a href="#内容安全策略" class="header-anchor">#</a> 内容安全策略</h3> <p><a href="https://developers.google.com/web/fundamentals/security/csp/" target="_blank" rel="noopener noreferrer">内容安全策略<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>可以进一步限制webview可以加载和执行的内容。例如：内容安全策略强制可以运行在webview中的脚本白名单，或者告诉webview只加载带<code>https</code>协议的图片。</p> <p>要想加上内容安全策略，将<code>&lt;meta http-equiv=&quot;Content-Security-Policy&quot;&gt;</code>指令放到webview的<code>&lt;head&gt;</code>中</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+
+                &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src 'none';&quot;&gt;
+
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+                &lt;title&gt;Cat Coding&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                ...
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><code>default-src 'none';</code>策略直接禁止了所有内容。我们可以按插件需要的最少内容修改这个指令，如只允许通过<code>https</code>加载本地脚本、样式和图片：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span>
+    <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Content-Security-Policy<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>default-src 'none'; img-src vscode-resource: https:; script-src vscode-resource:; style-src vscode-resource:;<span class="token punctuation">&quot;</span></span>
+<span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上述策略也隐式地禁用了内联脚本和样式。把内联样式和脚本提取到外部文件中是一个非常好的实践，也不会与内容安全策略冲突。</p> <h3 id="只通过https加载内容"><a href="#只通过https加载内容" class="header-anchor">#</a> 只通过https加载内容</h3> <p>如果你的webview允许加载外部资源，我们强烈建议你只允许通过<code>https</code>加载而不要使用http，上面的例子已经用内容安全策略展示了使用<code>https</code>的方式。</p> <h3 id="审查用户输入"><a href="#审查用户输入" class="header-anchor">#</a> 审查用户输入</h3> <p>就像构建普通HTML页面一样，你也同样需要在webview中审查用户输入的内容。
+没有审查输入内容可能会导致内容注入，也就意味着将用户置于了危险之中。</p> <p>可能需要审查的值：</p> <ul><li>文件内容</li> <li>文件和文件夹路径</li> <li>用户工作区设置</li></ul> <p>可以考虑用一个辅助库去构建HTML模板，或者确保所有来自用户工作区的内容都通过了审查</p> <p>只依赖审查内容的安全性是不够的，你也要遵循其他<a href="#%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5">安全性的最佳实践</a>，尽可能减少潜在的内容注入。</p> <h2 id="持久性"><a href="#持久性" class="header-anchor">#</a> 持久性</h2> <hr> <p>在webview的标准<a href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">生命周期</a>中，<code>createWebviewPanel</code>负责创建和销毁（用户关闭或者调用<code>.dispose()</code>方法）webview。而webview的内容再是在webview可见时创建的，在webview处于非激活状态时销毁。webview处于非激活标签中时，任何webview中的保留的状态都会丢失。</p> <p>所以最好减少webview中的状态，取而代之用<a href="#%E5%B0%86webview%E7%9A%84%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E5%88%B0%E6%8F%92%E4%BB%B6%E4%B8%AD">消息传递</a>储存状态。</p> <h3 id="getstate和setstate"><a href="#getstate和setstate" class="header-anchor">#</a> getState和setState</h3> <p>运行在webview中的脚本可以使用<code>getState</code>和<code>setState</code>方法保存和恢复JSON序列化的状态对象。这个状态可以一直保留，即使webview面板已经被隐藏，只有当它销毁时，状态则会一起销毁。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token comment">// webview中的脚本</span>
+<span class="token keyword">const</span> vscode <span class="token operator">=</span> <span class="token function">acquireVsCodeApi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> counter <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'lines-of-code-counter'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 检查是否需要恢复状态</span>
+<span class="token keyword">const</span> previousState <span class="token operator">=</span> vscode<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> count <span class="token operator">=</span> previousState <span class="token operator">?</span> previousState<span class="token punctuation">.</span>count <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+counter<span class="token punctuation">.</span>textContent <span class="token operator">=</span> count<span class="token punctuation">;</span>
+
+<span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    counter<span class="token punctuation">.</span>textContent <span class="token operator">=</span> count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token comment">// 更新已经保存的状态</span>
+    vscode<span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><code>getState</code>和<code>setState</code>是用来保存状态的比较好的办法，因为他们的性能消耗要远低于<code>retainContextWhenHidden</code>。</p> <h3 id="序列化"><a href="#序列化" class="header-anchor">#</a> 序列化</h3> <p>使用<code>WebviewPanelSerializer</code>之后，你的webview可以在VS Code关闭后自动恢复。序列化构建于<code>getState</code>和<code>setState</code>之上，只有你的插件注册了<code>WebviewPanelSerializer</code>，这个功能才会生效。</p> <p>给插件的<code>package.json</code>添加一个<code>onWebviewPanel</code>激活事件，然后我们的代码喵就能在VS Code重启后继续工作了：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token property">&quot;activationEvents&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    ...<span class="token punctuation">,</span>
+    <span class="token string">&quot;onWebviewPanel:catCoding&quot;</span>
+<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这个激活事件确保我们的插件不论VS Code何时恢复<code>catCoding</code>webview时都会启动。</p> <p>然后在我们插件的<code>activate</code>方法中调用<code>registerWebviewPanelSerializer</code>注册一个新的<code>WebviewPanelSerializer</code>，这个函数负责恢复webview之前保存的内容。其中的state就是webview用<code>setState</code>设置的JSON格式的状态。</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 常见设置...</span>
+
+    <span class="token comment">// 确保我们注册了一个序列化器</span>
+    vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">registerWebviewPanelSerializer</span><span class="token punctuation">(</span><span class="token string">'catCoding'</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">CatCodingSerializer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CatCodingSerializer</span> <span class="token keyword">implements</span> <span class="token class-name">vscode<span class="token punctuation">.</span>WebviewPanelSerializer</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">deserializeWebviewPanel</span><span class="token punctuation">(</span><span class="token parameter">webviewPanel<span class="token operator">:</span> vscode<span class="token punctuation">.</span>WebviewPanel<span class="token punctuation">,</span> state<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// `state`是webview内调用`setState`保留住的</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Got state: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>state<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 恢复我们的webview内容</span>
+        <span class="token comment">//</span>
+        <span class="token comment">// 确保我们将`webviewPanel`传递到了这里</span>
+        <span class="token comment">// 然后用事件侦听器恢复我们的内容</span>
+        webviewPanel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>在VS Code中打开一个喵喵打代码的面板，关闭后重启就能看到这个面板恢复到了之前的状态和位置。</p> <h3 id="隐藏时保留上下文"><a href="#隐藏时保留上下文" class="header-anchor">#</a> 隐藏时保留上下文</h3> <p>如果webview的视图非常复杂，或者状态不能很快地保存和恢复，你则可以用<code>retainContextWhenHidden</code>选项，这个选项在不可见的状态中保存了webview的内容，即使webview本身不处于激活状态。</p> <p>虽然<strong>Cat Coding</strong>说不上有很复杂的状态，不过我们可以打开<code>retainContextWhenHidden</code>看看webview的行为会发生什么变化：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> vscode <span class="token keyword">from</span> <span class="token string">'vscode'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">activate</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">:</span> vscode<span class="token punctuation">.</span>ExtensionContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  context<span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    vscode<span class="token punctuation">.</span>commands<span class="token punctuation">.</span><span class="token function">registerCommand</span><span class="token punctuation">(</span><span class="token string">'catCoding.start'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> panel <span class="token operator">=</span> vscode<span class="token punctuation">.</span>window<span class="token punctuation">.</span><span class="token function">createWebviewPanel</span><span class="token punctuation">(</span>
+        <span class="token string">'catCoding'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cat Coding'</span><span class="token punctuation">,</span>
+        vscode<span class="token punctuation">.</span>ViewColumn<span class="token punctuation">.</span>One<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          enableScripts<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          retainContextWhenHidden<span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      panel<span class="token punctuation">.</span>webview<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getWebviewContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Cat Coding&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;img src=&quot;https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif&quot; width=&quot;300&quot; /&gt;
+            &lt;h1 id=&quot;lines-of-code-counter&quot;&gt;0&lt;/h1&gt;
+
+            &lt;script&gt;
+                const counter = document.getElementById('lines-of-code-counter');
+
+                let count = 0;
+                setInterval(() =&gt; {
+                    counter.textContent = count++;
+                }, 100);
+            &lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><p><img src="https://media.githubusercontent.com/media/Microsoft/vscode-docs/master/api/extension-guides/images/webview/persistence-retrain.gif" alt="持久化保留"></p> <p>我们可以注意到计数器没有重置，webview隐藏之后就恢复了。而且不需要多余的代码！<code>retainContextWhenHidden</code>的行为就像浏览器一样，脚本和其他内容被暂时挂起，但是一旦webview可见之后就会立即恢复。但是在webview隐藏状态下，你还是不能给它发送消息的。</p> <p>虽然<code>retainContextWhenHidden</code>很吸引人，但是记住这个功能的内容占用很高，只有其他的持久化技术无能为力之时再选择这种方式。</p> <h2 id="下一步"><a href="#下一步" class="header-anchor">#</a> 下一步</h2> <p>如果你想了解学习更多VS Code扩展性的内容，请查看下列主题：</p> <ul><li><a href="/vscode-ext-doccn/" class="router-link-active">插件API</a> - 所有的VS Code插件API</li> <li><a href="/extension-capabilities/README">插件功能</a> - 其它拓展VS Code功能的方式</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Rackar/vscode-ext-doccn/edit/vuepress/docs/extension-guides/webview.md" target="_blank" rel="noopener noreferrer">参与编辑此文章</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">4/9/2020, 4:21:14 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vscode-ext-doccn/extension-guides/tree-view.html" class="prev">
+        树视图
+      </a></span> <span class="next"><a href="/vscode-ext-doccn/extension-guides/virtual-documents.html">
+        虚拟文档
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vscode-ext-doccn/assets/js/app.67b099dc.js" defer></script><script src="/vscode-ext-doccn/assets/js/2.0c3262fa.js" defer></script><script src="/vscode-ext-doccn/assets/js/51.baf68db8.js" defer></script>
+  </body>
+</html>
